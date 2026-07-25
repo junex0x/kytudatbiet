@@ -597,25 +597,16 @@
           `꧁༺ ${transformText(input, fontMaps.smallCaps)} ༻꧂`
         );
       }
-
+      
       if (activeTab === 'all' || activeTab === 'fonts') {
-        styles.push(
-    transformText(input, fontMaps.smallCaps),
-    transformText(input, fontMaps.script),
-    transformText(input, fontMaps.bold),
-    transformText(input, fontMaps.circled),
-    transformText(input, fontMaps.squared),
-    transformText(input, fontMaps.gothic),
-    transformText(input, fontMaps.italic),
-    transformText(input, fontMaps.boldItalic),
-    transformText(input, fontMaps.doubleStruck),
-    transformText(input, fontMaps.monospace),
-    transformText(input, fontMaps.sans),
-    transformText(input, fontMaps.sansBold),
-    transformText(input, fontMaps.sansItalic),
-    transformText(input, fontMaps.sansBoldItalic),
-    transformText(input, fontMaps.fraktur)
-);
+  styles.push(
+    `${transformText(input, fontMaps.smallCaps)}`,
+    `${transformText(input, fontMaps.script)}`,
+    `${transformText(input, fontMaps.bold)}`,
+    `${transformText(input, fontMaps.circled)}`,
+    `${transformText(input, fontMaps.squared)}`,
+    `${transformText(input, fontMaps.gothic)}`
+  );
       }
 
       if (activeTab === 'all' || activeTab === 'kaomoji') {
