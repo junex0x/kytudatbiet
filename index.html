@@ -2,753 +2,588 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tạo Ký Tự Đặc Biệt | Admin Kim Yến</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #08080f;
-      --surface: rgba(255, 255, 255, 0.04);
-      --surface-solid: #12121c;
-      --surface2: rgba(255, 255, 255, 0.07);
-      --border: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(255, 255, 255, 0.18);
-      --text: #f4f4f8;
-      --text-muted: #9a9ab0;
-      --primary: #a78bfa;
-      --primary-bright: #c4b5fd;
-      --accent: #34d399;
-      --pink: #f472b6;
-      --success: #22c55e;
-      --radius: 16px;
-      --radius-sm: 10px;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tạo Kí Tự Đặc Biệt Siêu Đẹp - Admin Kim Yến ✨</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      font-family: 'Outfit', 'Noto Sans', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      color: #fff;
       min-height: 100vh;
-      line-height: 1.5;
-      overflow-x: hidden;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background 0.3s;
     }
 
-    /* Animated gradient background */
-    .bg-gradient {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: 
-        radial-gradient(ellipse 80% 60% at 10% 20%, rgba(167, 139, 250, 0.18) 0%, transparent 50%),
-        radial-gradient(ellipse 60% 50% at 90% 80%, rgba(52, 211, 153, 0.12) 0%, transparent 50%),
-        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(244, 114, 182, 0.08) 0%, transparent 50%);
-      animation: bgPulse 12s ease-in-out infinite alternate;
+    body.light-mode {
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e8eaf6 100%);
+      color: #333;
     }
 
-    @keyframes bgPulse {
-      0% { opacity: 1; }
-      100% { opacity: 0.75; }
-    }
-
-    /* Floating orbs */
-    .orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(60px);
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
-    }
-    .orb-1 {
-      width: 300px; height: 300px;
-      background: #a78bfa;
-      top: -80px; left: -80px;
-      animation: float1 18s ease-in-out infinite;
-    }
-    .orb-2 {
-      width: 250px; height: 250px;
-      background: #34d399;
-      bottom: -60px; right: -40px;
-      animation: float2 22s ease-in-out infinite;
-    }
-    .orb-3 {
-      width: 180px; height: 180px;
-      background: #f472b6;
-      top: 40%; right: 10%;
-      animation: float3 15s ease-in-out infinite;
-    }
-
-    @keyframes float1 {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(40px, 60px); }
-    }
-    @keyframes float2 {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(-50px, -30px); }
-    }
-    @keyframes float3 {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(-30px, 40px); }
-    }
-
+    /* Container chính */
     .container {
-      position: relative;
-      z-index: 1;
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 32px 18px 70px;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      text-align: center;
-      margin-bottom: 36px;
+      width: 100%;
+      max-width: 750px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 28px;
+      padding: 25px 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
       position: relative;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(244,114,182,0.15));
-      border: 1px solid rgba(167,139,250,0.3);
-      color: var(--primary-bright);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 50px;
-      margin-bottom: 16px;
-      letter-spacing: 0.03em;
+    body.light-mode .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
     }
 
-    .badge::before {
-      content: '';
-      width: 7px; height: 7px;
-      background: var(--accent);
+    /* Dark Mode Toggle Button */
+    .theme-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      box-shadow: 0 0 8px var(--accent);
-      animation: pulse-dot 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #c4b5fd 0%, #f472b6 50%, #34d399 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 10px;
-      line-height: 1.2;
-    }
-
-    header .subtitle {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      font-weight: 400;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    .admin-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 18px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      padding: 8px 16px 8px 10px;
-      border-radius: 50px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .admin-avatar {
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #a78bfa, #f472b6);
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: -0.02em;
+      font-size: 1.1rem;
+      transition: 0.3s;
     }
 
-    .admin-tag strong {
-      color: var(--text);
-      font-weight: 600;
+    body.light-mode .theme-btn {
+      background: #ff4d6d;
+      color: #fff;
     }
 
-    /* ===== CARDS ===== */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      margin-bottom: 20px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      transition: border-color 0.25s;
+    /* Header Admin Kim Yến */
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
     }
 
-    .card:hover {
-      border-color: var(--border-hover);
-    }
-
-    .card-title {
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-      display: flex;
+    .admin-badge {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
+      background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      box-shadow: 0 4px 15px rgba(255, 8, 68, 0.4);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .card-title::before {
-      content: '';
-      width: 3px;
-      height: 14px;
-      background: linear-gradient(180deg, var(--primary), var(--pink));
-      border-radius: 2px;
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a8edd9 0%, #fed6e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
     }
 
-    /* Input */
-    textarea {
+    body.light-mode h1 {
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    body.light-mode .subtitle { color: #666; }
+
+    /* Input & Tuỳ chỉnh */
+    .input-box {
+      margin-bottom: 18px;
+    }
+
+    .input-box label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #ffb3c1;
+    }
+
+    body.light-mode .input-box label { color: #ff3366; }
+
+    .main-input {
       width: 100%;
-      min-height: 110px;
-      background: rgba(0,0,0,0.25);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 16px 18px;
-      color: var(--text);
-      font-size: 1.2rem;
-      font-family: inherit;
-      font-weight: 500;
-      resize: vertical;
-      transition: border-color 0.25s, box-shadow 0.25s;
-    }
-
-    textarea:focus {
+      padding: 14px 18px;
+      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 700;
       outline: none;
-      border-color: rgba(167,139,250,0.5);
-      box-shadow: 0 0 0 3px rgba(167,139,250,0.12);
+      transition: all 0.3s;
     }
 
-    textarea::placeholder {
-      color: var(--text-muted);
-      font-weight: 400;
+    body.light-mode .main-input {
+      background: #fff;
+      color: #333;
+      border-color: #ffd0d9;
     }
 
-    /* Styles list */
-    .styles-grid {
+    .main-input:focus {
+      border-color: #ff4d6d;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+    }
+
+    /* Grid chọn Icon */
+    .decor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 500px) {
+      .decor-grid { grid-template-columns: 1fr; }
+    }
+
+    .decor-group select {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(30, 25, 60, 0.8);
+      color: #fff;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+      font-size: 0.88rem;
+    }
+
+    body.light-mode .decor-group select {
+      background: #fff;
+      color: #333;
+      border-color: #ffd0d9;
+    }
+
+    /* Tab Menu Phân Loại */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    .tabs::-webkit-scrollbar { height: 4px; }
+    .tabs::-webkit-scrollbar-thumb { background: #ff4d6d; border-radius: 4px; }
+
+    .tab-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: #aaa;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.2s;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+      color: #fff;
+    }
+
+    /* Danh sách Kết quả */
+    .result-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 5px;
     }
 
-    .style-item {
+    .result-list::-webkit-scrollbar { width: 5px; }
+    .result-list::-webkit-scrollbar-thumb { background: #ff4d6d; border-radius: 5px; }
+
+    .result-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 16px;
+      border-radius: 16px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 14px;
-      background: rgba(0,0,0,0.22);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 13px 16px;
       transition: all 0.2s;
+      cursor: pointer;
     }
 
-    .style-item:hover {
-      border-color: rgba(167,139,250,0.35);
-      background: rgba(167,139,250,0.06);
-      transform: translateX(3px);
+    body.light-mode .result-item {
+      background: #fff;
+      border-color: #ffe0e6;
     }
 
-    .style-label {
-      flex: 0 0 130px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--primary-bright);
-      letter-spacing: 0.02em;
+    .result-item:hover {
+      background: rgba(255, 77, 109, 0.15);
+      border-color: rgba(255, 77, 109, 0.4);
+      transform: translateY(-2px);
     }
 
-    .style-output {
-      flex: 1;
-      font-size: 1.2rem;
+    .result-text {
+      font-size: 1.05rem;
+      font-weight: 700;
       word-break: break-all;
-      min-height: 1.5em;
-      user-select: all;
-      color: var(--text);
     }
 
-    .copy-btn {
-      flex-shrink: 0;
-      background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    body.light-mode .result-text { color: #333; }
+
+    .btn-copy {
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
       color: white;
       border: none;
-      border-radius: 8px;
-      padding: 8px 15px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      font-family: inherit;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 800;
       cursor: pointer;
-      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       white-space: nowrap;
-      box-shadow: 0 2px 10px rgba(139, 92, 246, 0.3);
+      box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
     }
 
-    .copy-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(139, 92, 246, 0.45);
+    /* Bộ Kí tự HOT copy nhanh */
+    .quick-symbols {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .copy-btn:active {
-      transform: scale(0.96);
-    }
-
-    .copy-btn.copied {
-      background: linear-gradient(135deg, #16a34a, #22c55e);
-      box-shadow: 0 2px 10px rgba(34, 197, 94, 0.35);
-    }
-
-    /* Character section */
-    .char-tabs {
+    .symbol-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 16px;
-    }
-
-    .char-tab {
-      background: rgba(0,0,0,0.25);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      border-radius: 50px;
-      padding: 7px 15px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      font-family: inherit;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .char-tab:hover {
-      border-color: rgba(167,139,250,0.4);
-      color: var(--text);
-    }
-
-    .char-tab.active {
-      background: linear-gradient(135deg, rgba(139,92,246,0.35), rgba(244,114,182,0.25));
-      border-color: rgba(167,139,250,0.5);
-      color: white;
-      box-shadow: 0 2px 12px rgba(139, 92, 246, 0.2);
-    }
-
-    .char-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
       gap: 8px;
     }
 
-    .char-btn {
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.25);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 1.35rem;
+    .symbol-tag {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 0.95rem;
       cursor: pointer;
-      transition: all 0.18s;
-      color: var(--text);
-      font-family: inherit;
+      transition: 0.2s;
+      font-weight: 600;
     }
 
-    .char-btn:hover {
-      border-color: rgba(167,139,250,0.5);
-      background: rgba(167,139,250,0.12);
-      transform: scale(1.1);
-      box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
+    body.light-mode .symbol-tag {
+      background: #fff;
+      color: #444;
+      border: 1px solid #ffe0e6;
     }
 
-    .char-btn:active {
-      transform: scale(0.92);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 36px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: var(--primary-bright);
-      text-decoration: none;
-      font-weight: 500;
+    .symbol-tag:hover {
+      background: #ff4d6d;
+      color: #fff;
     }
 
     /* Toast */
     .toast {
       position: fixed;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%) translateY(120px);
-      background: linear-gradient(135deg, #16a34a, #22c55e);
-      color: white;
-      padding: 13px 28px;
-      border-radius: 50px;
+      bottom: 25px;
+      background: #00b894;
+      color: #fff;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 800;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      display: none;
+      animation: fadeInUp 0.3s forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #888;
       font-weight: 600;
-      font-size: 0.9rem;
-      opacity: 0;
-      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-      z-index: 100;
-      box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      header h1 {
-        font-size: 1.85rem;
-      }
-      .style-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .style-label {
-        flex: none;
-      }
-      .copy-btn {
-        align-self: flex-end;
-      }
-      .container {
-        padding: 24px 14px 60px;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="bg-gradient"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
 
   <div class="container">
-    <header>
-      <div class="badge">Công cụ miễn phí · Unicode</div>
-      <h1>✨ Tạo Ký Tự Đặc Biệt</h1>
-      <p class="subtitle">Nhập văn bản bất kỳ → nhận ngay hàng loạt kiểu chữ đẹp &amp; ký tự đặc biệt</p>
-      <div class="admin-tag">
-        <div class="admin-avatar">KY</div>
-        <span>Admin: <strong>Kim Yến</strong></span>
+    
+    <button class="theme-btn" onclick="toggleTheme()" title="Đổi giao diện">
+      <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+
+    <div class="header">
+      <div class="admin-badge">
+        <i class="fa-solid fa-crown"></i> Admin: Kim Yến
       </div>
-    </header>
-
-    <div class="card">
-      <div class="card-title">Văn bản của bạn</div>
-      <textarea id="inputText" placeholder="Nhập chữ ở đây... ví dụ: Xin chào Kim Yến 💕" autofocus>Xin chào</textarea>
+      <h1>Tạo Kí Tự Đặc Biệt ✨</h1>
+      <p class="subtitle">Đổi kiểu chữ Game, Facebook, TikTok cực đỉnh!</p>
     </div>
 
-    <div class="card">
-      <div class="card-title">Các kiểu chữ đặc biệt</div>
-      <div class="styles-grid" id="stylesGrid"></div>
+    <div class="input-box">
+      <label for="nameInput"><i class="fa-solid fa-pen-nib"></i> Nhập tên của bạn vào đây:</label>
+      <input type="text" id="nameInput" class="main-input" placeholder="Nhập tên... (Ví dụ: Kim Yến)" value="Kim Yến">
     </div>
 
-    <div class="card">
-      <div class="card-title">Bảng ký tự đặc biệt (bấm để chèn)</div>
-      <div class="char-tabs" id="charTabs"></div>
-      <div class="char-grid" id="charGrid"></div>
+    <div class="decor-grid">
+      <div class="decor-group">
+        <select id="leftDecor" onchange="renderStyles()">
+          <option value="">-- Icon Trái --</option>
+          <option value="꧁༺">꧁༺ (Khung cánh 1)</option>
+          <option value="꧁">꧁ (Khung đẹp)</option>
+          <option value="✿">✿ (Bông hoa)</option>
+          <option value="★彡">★彡 (Ngôi sao)</option>
+          <option value="╰❥">╰❥ (Mũi tên tim)</option>
+          <option value="︵✰">︵✰ (Mây sao)</option>
+          <option value="⚡">⚡ (Sét)</option>
+          <option value="👑">👑 (Vương miện)</option>
+          <option value="亗">亗 (Mũ ngầu)</option>
+        </select>
+      </div>
+
+      <div class="decor-group">
+        <select id="midDecor" onchange="renderStyles()">
+          <option value="">-- Kí Tự Giữa --</option>
+          <option value=" ">Mặc định (Khoảng trắng)</option>
+          <option value=".">K.i.m Y.ế.n (Dấu chấm)</option>
+          <option value="_">K_i_m Y_ế_n (Gạch dưới)</option>
+          <option value="★">K★i★m Y★ế★n (Ngôi sao)</option>
+          <option value="✿">K✿i✿m Y✿ế✿n (Hoa)</option>
+        </select>
+      </div>
+
+      <div class="decor-group">
+        <select id="rightDecor" onchange="renderStyles()">
+          <option value="">-- Icon Phải --</option>
+          <option value="༻꧂">༻꧂ (Khung cánh 1)</option>
+          <option value="꧂">꧂ (Khung đẹp)</option>
+          <option value="✿">✿ (Bông hoa)</option>
+          <option value="彡★">彡★ (Ngôi sao)</option>
+          <option value="❣">❣ (Trái tim)</option>
+          <option value="✰︵">✰︵ (Mây sao)</option>
+          <option value="⚡">⚡ (Sét)</option>
+          <option value="👑">👑 (Vương miện)</option>
+        </select>
+      </div>
     </div>
 
-    <footer>
-      Thiết kế &amp; phát triển bởi <strong style="color:var(--primary-bright)">Kim Yến</strong> · Hỗ trợ mọi ký tự Unicode
-    </footer>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('all')">Tất Cả Kiểu</button>
+      <button class="tab-btn" onclick="switchTab('game')">Tên Game HOT</button>
+      <button class="tab-btn" onclick="switchTab('fonts')">Font Unicode Đẹp</button>
+      <button class="tab-btn" onclick="switchTab('kaomoji')">Kaomoji Mặt Cười</button>
+      <button class="tab-btn" onclick="switchTab('numbers')">Chữ Số Độc Lạ</button>
+    </div>
+
+    <div class="result-list" id="resultList">
+      </div>
+
+    <div class="quick-symbols">
+      <div class="input-box">
+        <label><i class="fa-solid fa-fire"></i> Bộ Kí Tự Icon Đặt Tên Game Sao Chép Nhanh:</label>
+      </div>
+      <div class="symbol-tags">
+        <span class="symbol-tag" onclick="copyText('꧁༺✿ Kim Yến ✿༻꧂')">꧁༺✿ Kim Yến ✿༻꧂</span>
+        <span class="symbol-tag" onclick="copyText('亗')">亗</span>
+        <span class="symbol-tag" onclick="copyText('✿')">✿</span>
+        <span class="symbol-tag" onclick="copyText('╰❥')">╰❥</span>
+        <span class="symbol-tag" onclick="copyText('︵✰')">︵✰</span>
+        <span class="symbol-tag" onclick="copyText('⚡')">⚡</span>
+        <span class="symbol-tag" onclick="copyText('👑')">👑</span>
+        <span class="symbol-tag" onclick="copyText('💖')">💖</span>
+        <span class="symbol-tag" onclick="copyText('ღ')">ღ</span>
+        <span class="symbol-tag" onclick="copyText('❦')">❦</span>
+        <span class="symbol-tag" onclick="copyText('(͡° ͜ʖ ͡°)')">(͡° ͜ʖ ͡°)</span>
+        <span class="symbol-tag" onclick="copyText('ʕ•ᴥ•ʔ')">ʕ•ᴥ•ʔ</span>
+        <span class="symbol-tag" onclick="copyText('(◕‿◕✿)')">(◕‿◕✿)</span>
+        <span class="symbol-tag" onclick="copyText('①②③④⑤')">①②③④⑤</span>
+        <span class="symbol-tag" onclick="copyText('❶❷❸❹❺')">❶❷❸❹❺</span>
+      </div>
+    </div>
+
   </div>
 
-  <div class="toast" id="toast">✓ Đã sao chép!</div>
+  <footer>
+    Hệ thống tạo kí tự đặc biệt được vận hành bởi <strong>Admin Kim Yến</strong> © 2026
+  </footer>
+
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i> Đã sao chép vào bộ nhớ tạm!
+  </div>
 
   <script>
-    // ========== Fancy Text Styles ==========
-    const styles = [
-      {
-        name: "Bold",
-        convert: (t) => mapChars(t, {
-          a:'𝗮',b:'𝗯',c:'𝗰',d:'𝗱',e:'𝗲',f:'𝗳',g:'𝗴',h:'𝗵',i:'𝗶',j:'𝗷',k:'𝗸',l:'𝗹',m:'𝗺',
-          n:'𝗻',o:'𝗼',p:'𝗽',q:'𝗾',r:'𝗿',s:'𝘀',t:'𝘁',u:'𝘂',v:'𝘃',w:'𝘄',x:'𝘅',y:'𝘆',z:'𝘇',
-          A:'𝗔',B:'𝗕',C:'𝗖',D:'𝗗',E:'𝗘',F:'𝗙',G:'𝗚',H:'𝗛',I:'𝗜',J:'𝗝',K:'𝗞',L:'𝗟',M:'𝗠',
-          N:'𝗡',O:'𝗢',P:'𝗣',Q:'𝗤',R:'𝗥',S:'𝗦',T:'𝗧',U:'𝗨',V:'𝗩',W:'𝗪',X:'𝗫',Y:'𝗬',Z:'𝗭',
-          '0':'𝟬','1':'𝟭','2':'𝟮','3':'𝟯','4':'𝟰','5':'𝟱','6':'𝟲','7':'𝟳','8':'𝟴','9':'𝟵'
-        })
-      },
-      {
-        name: "Italic",
-        convert: (t) => mapChars(t, {
-          a:'𝘢',b:'𝘣',c:'𝘤',d:'𝘥',e:'𝘦',f:'𝘧',g:'𝘨',h:'𝘩',i:'𝘪',j:'𝘫',k:'𝘬',l:'𝘭',m:'𝘮',
-          n:'𝘯',o:'𝘰',p:'𝘱',q:'𝘲',r:'𝘳',s:'𝘴',t:'𝘵',u:'𝘶',v:'𝘷',w:'𝘸',x:'𝘹',y:'𝘺',z:'𝘻',
-          A:'𝘈',B:'𝘉',C:'𝘊',D:'𝘋',E:'𝘌',F:'𝘍',G:'𝘎',H:'𝘏',I:'𝘐',J:'𝘑',K:'𝘒',L:'𝘓',M:'𝘔',
-          N:'𝘕',O:'𝘖',P:'𝘗',Q:'𝘘',R:'𝘙',S:'𝘚',T:'𝘛',U:'𝘜',V:'𝘝',W:'𝘞',X:'𝘟',Y:'𝘠',Z:'𝘡'
-        })
-      },
-      {
-        name: "Bold Italic",
-        convert: (t) => mapChars(t, {
-          a:'𝙖',b:'𝙗',c:'𝙘',d:'𝙙',e:'𝙚',f:'𝙛',g:'𝙜',h:'𝙝',i:'𝙞',j:'𝙟',k:'𝙠',l:'𝙡',m:'𝙢',
-          n:'𝙣',o:'𝙤',p:'𝙥',q:'𝙦',r:'𝙧',s:'𝙨',t:'𝙩',u:'𝙪',v:'𝙫',w:'𝙬',x:'𝙭',y:'𝙮',z:'𝙯',
-          A:'𝘼',B:'𝘽',C:'𝘾',D:'𝘿',E:'𝙀',F:'𝙁',G:'𝙂',H:'𝙃',I:'𝙄',J:'𝙅',K:'𝙆',L:'𝙇',M:'𝙈',
-          N:'𝙉',O:'𝙊',P:'𝙋',Q:'𝙌',R:'𝙍',S:'𝙎',T:'𝙏',U:'𝙐',V:'𝙑',W:'𝙒',X:'𝙓',Y:'𝙔',Z:'𝙕'
-        })
-      },
-      {
-        name: "Script",
-        convert: (t) => mapChars(t, {
-          a:'𝓪',b:'𝓫',c:'𝓬',d:'𝓭',e:'𝓮',f:'𝓯',g:'𝓰',h:'𝓱',i:'𝓲',j:'𝓳',k:'𝓴',l:'𝓵',m:'𝓶',
-          n:'𝓷',o:'𝓸',p:'𝓹',q:'𝓺',r:'𝓻',s:'𝓼',t:'𝓽',u:'𝓾',v:'𝓿',w:'𝔀',x:'𝔁',y:'𝔂',z:'𝔃',
-          A:'𝓐',B:'𝓑',C:'𝓒',D:'𝓓',E:'𝓔',F:'𝓕',G:'𝓖',H:'𝓗',I:'𝓘',J:'𝓙',K:'𝓚',L:'𝓛',M:'𝓜',
-          N:'𝓝',O:'𝓞',P:'𝓟',Q:'𝓠',R:'𝓡',S:'𝓢',T:'𝓣',U:'𝓤',V:'𝓥',W:'𝓦',X:'𝓧',Y:'𝓨',Z:'𝓩'
-        })
-      },
-      {
-        name: "Double Struck",
-        convert: (t) => mapChars(t, {
-          a:'𝕒',b:'𝕓',c:'𝕔',d:'𝕕',e:'𝕖',f:'𝕗',g:'𝕘',h:'𝕙',i:'𝕚',j:'𝕛',k:'𝕜',l:'𝕝',m:'𝕞',
-          n:'𝕟',o:'𝕠',p:'𝕡',q:'𝕢',r:'𝕣',s:'𝕤',t:'𝕥',u:'𝕦',v:'𝕧',w:'𝕨',x:'𝕩',y:'𝕪',z:'𝕫',
-          A:'𝔸',B:'𝔹',C:'ℂ',D:'𝔻',E:'𝔼',F:'𝔽',G:'𝔾',H:'ℍ',I:'𝕀',J:'𝕁',K:'𝕂',L:'𝕃',M:'𝕄',
-          N:'ℕ',O:'𝕆',P:'ℙ',Q:'ℚ',R:'ℝ',S:'𝕊',T:'𝕋',U:'𝕌',V:'𝕍',W:'𝕎',X:'𝕏',Y:'𝕐',Z:'ℤ',
-          '0':'𝟘','1':'𝟙','2':'𝟚','3':'𝟛','4':'𝟜','5':'𝟝','6':'𝟞','7':'𝟟','8':'𝟠','9':'𝟡'
-        })
-      },
-      {
-        name: "Monospace",
-        convert: (t) => mapChars(t, {
-          a:'𝚊',b:'𝚋',c:'𝚌',d:'𝚍',e:'𝚎',f:'𝚏',g:'𝚐',h:'𝚑',i:'𝚒',j:'𝚓',k:'𝚔',l:'𝚕',m:'𝚖',
-          n:'𝚗',o:'𝚘',p:'𝚙',q:'𝚚',r:'𝚛',s:'𝚜',t:'𝚝',u:'𝚞',v:'𝚟',w:'𝚠',x:'𝚡',y:'𝚢',z:'𝚣',
-          A:'𝙰',B:'𝙱',C:'𝙲',D:'𝙳',E:'𝙴',F:'𝙵',G:'𝙶',H:'𝙷',I:'𝙸',J:'𝙹',K:'𝙺',L:'𝙻',M:'𝙼',
-          N:'𝙽',O:'𝙾',P:'𝙿',Q:'𝚀',R:'𝚁',S:'𝚂',T:'𝚃',U:'𝚄',V:'𝚅',W:'𝚆',X:'𝚇',Y:'𝚈',Z:'𝚉',
-          '0':'𝟶','1':'𝟷','2':'𝟸','3':'𝟹','4':'𝟺','5':'𝟻','6':'𝟼','7':'𝟽','8':'𝟾','9':'𝟿'
-        })
-      },
-      {
-        name: "Circled",
-        convert: (t) => mapChars(t, {
-          a:'ⓐ',b:'ⓑ',c:'ⓒ',d:'ⓓ',e:'ⓔ',f:'ⓕ',g:'ⓖ',h:'ⓗ',i:'ⓘ',j:'ⓙ',k:'ⓚ',l:'ⓛ',m:'ⓜ',
-          n:'ⓝ',o:'ⓞ',p:'ⓟ',q:'ⓠ',r:'ⓡ',s:'ⓢ',t:'ⓣ',u:'ⓤ',v:'ⓥ',w:'ⓦ',x:'ⓧ',y:'ⓨ',z:'ⓩ',
-          A:'Ⓐ',B:'Ⓑ',C:'Ⓒ',D:'Ⓓ',E:'Ⓔ',F:'Ⓕ',G:'Ⓖ',H:'Ⓗ',I:'Ⓘ',J:'Ⓙ',K:'Ⓚ',L:'Ⓛ',M:'Ⓜ',
-          N:'Ⓝ',O:'Ⓞ',P:'Ⓟ',Q:'Ⓠ',R:'Ⓡ',S:'Ⓢ',T:'Ⓣ',U:'Ⓤ',V:'Ⓥ',W:'Ⓦ',X:'Ⓧ',Y:'Ⓨ',Z:'Ⓩ',
-          '0':'⓪','1':'①','2':'②','3':'③','4':'④','5':'⑤','6':'⑥','7':'⑦','8':'⑧','9':'⑨'
-        })
-      },
-      {
-        name: "Squared",
-        convert: (t) => mapChars(t, {
-          a:'🄰',b:'🄱',c:'🄲',d:'🄳',e:'🄴',f:'🄵',g:'🄶',h:'🄷',i:'🄸',j:'🄹',k:'🄺',l:'🄻',m:'🄼',
-          n:'🄽',o:'🄾',p:'🄿',q:'🅀',r:'🅁',s:'🅂',t:'🅃',u:'🅄',v:'🅅',w:'🅆',x:'🅇',y:'🅈',z:'🅉',
-          A:'🄰',B:'🄱',C:'🄲',D:'🄳',E:'🄴',F:'🄵',G:'🄶',H:'🄷',I:'🄸',J:'🄹',K:'🄺',L:'🄻',M:'🄼',
-          N:'🄽',O:'🄾',P:'🄿',Q:'🅀',R:'🅁',S:'🅂',T:'🅃',U:'🅄',V:'🅅',W:'🅆',X:'🅇',Y:'🅈',Z:'🅉'
-        })
-      },
-      {
-        name: "Fullwidth",
-        convert: (t) => t.split('').map(c => {
-          const code = c.charCodeAt(0);
-          if (code >= 33 && code <= 126) return String.fromCharCode(code + 0xFEE0);
-          if (c === ' ') return '　';
-          return c;
-        }).join('')
-      },
-      {
-        name: "Upside Down",
-        convert: (t) => {
-          const map = {
-            a:'ɐ',b:'q',c:'ɔ',d:'p',e:'ǝ',f:'ɟ',g:'ƃ',h:'ɥ',i:'ᴉ',j:'ɾ',k:'ʞ',l:'l',m:'ɯ',
-            n:'u',o:'o',p:'d',q:'b',r:'ɹ',s:'s',t:'ʇ',u:'n',v:'ʌ',w:'ʍ',x:'x',y:'ʎ',z:'z',
-            A:'∀',B:'𐐒',C:'Ɔ',D:'ᗡ',E:'Ǝ',F:'Ⅎ',G:'פ',H:'H',I:'I',J:'ſ',K:'ʞ',L:'˥',M:'W',
-            N:'N',O:'O',P:'Ԁ',Q:'Q',R:'ᴿ',S:'S',T:'┴',U:'∩',V:'Λ',W:'M',X:'X',Y:'⅄',Z:'Z',
-            '1':'Ɩ','2':'ᄅ','3':'Ɛ','4':'ㄣ','5':'ϛ','6':'9','7':'ㄥ','8':'8','9':'6','0':'0',
-            '.':'˙',',':'\'','!':'¡','?':'¿','\'':',','"':',,','(':)',' )':'(','[':']',']':'[','{':'}','}':'{','<':'>','>':'<'
-          };
-          return t.split('').map(c => map[c] || map[c.toLowerCase()] || c).reverse().join('');
-        }
-      },
-      {
-        name: "Strikethrough",
-        convert: (t) => t.split('').map(c => c + '\u0336').join('')
-      },
-      {
-        name: "Underline",
-        convert: (t) => t.split('').map(c => c + '\u0332').join('')
-      },
-      {
-        name: "Zalgo (Glitch)",
-        convert: (t) => {
-          const zalgoUp = ['̍','̎','̄','̅','̿','̑','̆','̐','͒','͗','͑','̇','̈','̊','͂','̓','̈́','͊','͋','͌','̃','̂','̌','͐','̀','́','̋','̏','̒','̓','̔','̽','̉','ͣ','ͤ','ͥ','ͦ','ͧ','ͨ','ͩ','ͪ','ͫ','ͬ','ͭ','ͮ','ͯ','̾','͛','͆','̺'];
-          const zalgoDown = ['̖','̗','̘','̙','̜','̝','̞','̟','̠','̣','̤','̥','̦','̩','̪','̫','̬','̭','̮','̯','̰','̱','̲','̳','̹','̺','̻','̼','ͅ','͇','͈','͉','͍','͎','͓','͔','͕','͖','͙','͚','̣'];
-          const zalgoMid = ['̕','̛','̀','́','͘','̡','̢','̧','̨','̴','̵','̶','͏','͢','͏','͢'];
-          return t.split('').map(c => {
-            if (c === ' ') return c;
-            let result = c;
-            for (let i = 0; i < 2 + Math.random() * 3; i++) result += zalgoUp[Math.floor(Math.random()*zalgoUp.length)];
-            for (let i = 0; i < 1 + Math.random() * 2; i++) result += zalgoMid[Math.floor(Math.random()*zalgoMid.length)];
-            for (let i = 0; i < 2 + Math.random() * 3; i++) result += zalgoDown[Math.floor(Math.random()*zalgoDown.length)];
-            return result;
-          }).join('');
-        }
-      },
-      {
-        name: "Small Caps",
-        convert: (t) => mapChars(t, {
-          a:'ᴀ',b:'ʙ',c:'ᴄ',d:'ᴅ',e:'ᴇ',f:'ꜰ',g:'ɢ',h:'ʜ',i:'ɪ',j:'ᴊ',k:'ᴋ',l:'ʟ',m:'ᴍ',
-          n:'ɴ',o:'ᴏ',p:'ᴘ',q:'ǫ',r:'ʀ',s:'ꜱ',t:'ᴛ',u:'ᴜ',v:'ᴠ',w:'ᴡ',x:'x',y:'ʏ',z:'ᴢ'
-        })
-      }
-    ];
-
-    function mapChars(text, map) {
-      return text.split('').map(c => map[c] || c).join('');
-    }
-
-    // ========== Character Categories ==========
-    const charCategories = {
-      "Mũi tên": "← → ↑ ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇒ ⇑ ⇓ ⇔ ⇕ ⟵ ⟶ ⟷ ⬅ ➡ ⬆ ⬇ ↩ ↪ ↺ ↻ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌".split(' '),
-      "Toán học": "± × ÷ = ≠ ≈ ≤ ≥ ∞ ∑ ∏ √ ∛ ∜ ∫ ∂ ∇ ∈ ∉ ⊂ ⊃ ⊆ ⊇ ∪ ∩ ∅ ∧ ∨ ¬ ∀ ∃ ∴ ∵ ∝ ∠ ⊥ ∥ ℕ ℤ ℚ ℝ ℂ ℍ".split(' '),
-      "Biểu tượng": "★ ☆ ✦ ✧ ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ❋ ❊ ❉ ❈ ❇ ❆ ❅ ❄ ❃ ❂ ❁ ❀ ✿ ✾ ✽ ✼ ✻ ✺ ✹ ✸ ✷ ✶ ♠ ♣ ♥ ♦".split(' '),
-      "Cảm xúc": "😀 😁 😂 🤣 😃 😄 😅 😆 😉 😊 😋 😎 😍 😘 🥰 😗 😙 😚 🙂 🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐 😯 😪 😫 🥱 😴 😌 😛 😜 😝 🤤 😒 😓 😔 😕 🙃 🤑 😲 🙁 😖 😞 😟 😤 😢 😭 😦 😧 😨 😩 🤯 😬 😰 😱 🥵 🥶 😳 🤪 😵 🥴 😠 😡 🤬 😷 🤒 🤕 🤢 🤮 🤧 😇 🥳 🥺 🤠 🤡".split(' '),
-      "Trái tim": "❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 💔 ❣️ 💕 💞 💓 💗 💖 💘 💝 💟 ❣ ❤ ❥ ღ".split(' '),
-      "Hoa & Sao": "🌸 💮 🏵️ 🌹 🥀 🌺 🌻 🌼 🌷 🌱 🌲 🌳 🌴 🌵 🌾 🌿 ☘️ 🍀 🍁 🍂 🍃 ★ ☆ ✦ ✧ ⋆ ✩ ✪".split(' '),
-      "Khung": "─ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ ═ ║ ╔ ╗ ╚ ╝ ╠ ╣ ╦ ╩ ╬ ╭ ╮ ╯ ╰ ╱ ╲ ╳ ▔ ▕".split(' '),
-      "Tiền tệ": "¢ $ € £ ¥ ₩ ₽ ₴ ₦ ₨ ₪ ₫ ₭ ₮ ₱ ₲ ₳ ₵ ₸ ₹ ₺ ₼ ₾ ₿".split(' '),
-      "Khác": "© ® ™ ° • … † ‡ § ¶ ※ ‽ ⁇ ⁈ ⁉ ‼ ― – — ‾ ‿ ⁀ ⁂ ⁎ ⁏".split(' ')
+    // Bản đồ 20+ Font chữ Unicode
+    const fontMaps = {
+      smallCaps: { a: 'ᴀ', b: 'ʙ', c: 'ᴄ', d: 'ᴅ', e: 'ᴇ', f: 'ғ', g: 'ɢ', h: 'ʜ', i: 'ɪ', j: 'ᴊ', k: 'ᴋ', l: 'ʟ', m: 'ᴍ', n: 'ɴ', o: 'ᴏ', p: 'ᴘ', q: 'ǫ', r: 'ʀ', s: 's', t: 'ᴛ', u: 'ᴜ', v: 'ᴠ', w: 'ᴡ', x: 'x', y: 'ʏ', z: 'ᴢ' },
+      script: { a: '𝒶', b: '𝒷', c: '𝒸', d: '𝒹', e: '𝑒', f: '𝒻', g: '𝑔', h: '𝒽', i: '𝒾', j: '𝒿', k: '𝓀', l: '𝓁', m: '𝓂', n: '𝓃', o: '𝑜', p: '𝓅', q: '𝓆', r: '𝓇', s: '𝓈', t: '𝓉', u: '𝓊', v: '𝓋', w: '𝓌', x: '𝓍', y: '𝓎', z: '𝓏' },
+      bold: { a: '𝐚', b: '𝐛', c: '𝐜', d: '𝐝', e: '𝐞', f: '𝐟', g: '𝐠', h: '𝐡', i: '𝐢', j: '𝐣', k: '𝐤', l: '𝐥', m: '𝐦', n: '𝐧', o: '𝐨', p: '𝐩', q: '𝐪', r: '𝐫', s: '𝐬', t: '𝐭', u: '𝐮', v: '𝐯', w: '𝐰', x: '𝐱', y: '𝐲', z: '𝐳' },
+      circled: { a: 'ⓐ', b: 'ⓑ', c: 'ⓒ', d: 'ⓓ', e: 'ⓔ', f: 'ⓕ', g: 'ⓖ', h: 'ⓗ', i: 'ⓘ', j: 'ⓙ', k: 'ⓚ', l: 'ⓛ', m: 'ⓜ', n: 'ⓝ', o: 'ⓞ', p: 'ⓟ', q: 'ⓠ', r: 'ⓡ', s: 'ⓢ', t: 'ⓣ', u: 'ⓤ', v: 'ⓥ', w: 'ⓦ', x: 'ⓧ', y: 'ⓨ', z: 'ⓩ' },
+      squared: { a: '🄰', b: '🄱', c: '🄲', d: '🄳', e: '🄴', f: '🄵', g: '🄷', h: '🄷', i: '🄸', j: '🄹', k: '🄺', l: '🄻', m: '🄼', n: '🄽', o: '🄾', p: '🄿', q: '🅀', r: '🅁', s: '🅂', t: '🅃', u: '🅄', v: '🅅', w: '7', x: '8', y: '🅈', z: '🅉' },
+      gothic: { a: '𝖆', b: '𝖇', c: '𝖈', d: '𝖉', e: '𝖊', f: '𝖋', g: '𝖌', h: '𝖍', i: '𝖎', j: '𝖏', k: '𝖐', l: '𝖑', m: '𝖒', n: '𝖓', o: '𝖔', p: '𝖕', q: '𝖖', r: '𝖗', s: '𝖘', t: '𝖙', u: '𝖚', v: '𝖛', w: '𝖜', x: '𝖝', y: '𝖞', z: '𝖟' }
     };
 
-    // ========== DOM & Logic ==========
-    const inputEl = document.getElementById('inputText');
-    const stylesGrid = document.getElementById('stylesGrid');
-    const charTabs = document.getElementById('charTabs');
-    const charGrid = document.getElementById('charGrid');
-    const toast = document.getElementById('toast');
+    let activeTab = 'all';
 
-    function showToast(msg = '✓ Đã sao chép!') {
-      toast.textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 1800);
+    function transformText(text, map) {
+      return text.toLowerCase().split('').map(c => map[c] || c).join('');
     }
 
-    async function copyText(text, btn) {
-      try {
-        await navigator.clipboard.writeText(text);
-        if (btn) {
-          const original = btn.textContent;
-          btn.textContent = '✓ Đã chép';
-          btn.classList.add('copied');
-          setTimeout(() => {
-            btn.textContent = original;
-            btn.classList.remove('copied');
-          }, 1500);
-        }
+    // Xử lý chèn kí tự giữa
+    function applyMidDecor(text, sep) {
+      if (!sep || sep === ' ') return text;
+      return text.split('').join(sep);
+    }
+
+    // Render danh sách chính
+    function renderStyles() {
+      const rawInput = document.getElementById('nameInput').value.trim() || "Kim Yến";
+      const left = document.getElementById('leftDecor').value;
+      const right = document.getElementById('rightDecor').value;
+      const mid = document.getElementById('midDecor').value;
+
+      const input = applyMidDecor(rawInput, mid);
+      const resultList = document.getElementById('resultList');
+
+      let styles = [];
+
+      // Dữ liệu theo Tab
+      if (activeTab === 'all' || activeTab === 'game') {
+        styles.push(
+          `${left} ${input} ${right}`,
+          `${left}༺ ${input} ༻${right}`,
+          `✿ ${input} ✿`,
+          `╰❥ ${input} ❣`,
+          `︵✰ ${input} ✰︵`,
+          `★彡 ${input} 彡★`,
+          `⚡ ${input} ⚡`,
+          `👑 ${input} 👑`,
+          `亗 ${input} 亗`,
+          `I AM • ${input}`,
+          `[ ${input} ]`,
+          `꧁༺ ${transformText(input, fontMaps.smallCaps)} ༻꧂`
+        );
+      }
+
+      if (activeTab === 'all' || activeTab === 'fonts') {
+        styles.push(
+          `${transformText(input, fontMaps.smallCaps)}`,
+          `${transformText(input, fontMaps.script)}`,
+          `${transformText(input, fontMaps.bold)}`,
+          `${transformText(input, fontMaps.circled)}`,
+          `${transformText(input, fontMaps.squared)}`,
+          `${transformText(input, fontMaps.gothic)}`
+        );
+      }
+
+      if (activeTab === 'all' || activeTab === 'kaomoji') {
+        styles.push(
+          `(͡° ͜ʖ ͡°) ${input}`,
+          `ʕ•ᴥ•ʔ ${input}`,
+          `(◕‿◕✿) ${input}`,
+          `(｡♥‿♥｡) ${input}`,
+          `╰(▔∀▔)╯ ${input}`
+        );
+      }
+
+      if (activeTab === 'all' || activeTab === 'numbers') {
+        styles.push(
+          `①②③ ${input} ③②①`,
+          `❶❷❸ ${input} ❸❷❶`,
+          `𝟣𝟤𝟥 ${input} 𝟥𝟤𝟣`
+        );
+      }
+
+      resultList.innerHTML = styles.map(str => `
+        <div class="result-item" onclick="copyText('${escapeHtml(str)}')">
+          <span class="result-text">${escapeHtml(str)}</span>
+          <button class="btn-copy"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      `).join('');
+    }
+
+    function switchTab(tabName) {
+      activeTab = tabName;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderStyles();
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    function copyText(str) {
+      navigator.clipboard.writeText(str).then(() => {
         showToast();
-      } catch (e) {
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
+      }).catch(() => {
+        const el = document.createElement('textarea');
+        el.value = str;
+        document.body.appendChild(el);
+        el.select();
         document.execCommand('copy');
-        document.body.removeChild(ta);
+        document.body.removeChild(el);
         showToast();
+      });
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2000);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const icon = document.getElementById('themeIcon');
+      if (document.body.classList.contains('light-mode')) {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
       }
     }
 
-    function renderStyles() {
-      const text = inputEl.value || '';
-      stylesGrid.innerHTML = '';
-      styles.forEach(style => {
-        const output = style.convert(text);
-        const item = document.createElement('div');
-        item.className = 'style-item';
-        item.innerHTML = `
-          <span class="style-label">${style.name}</span>
-          <span class="style-output">${output || '—'}</span>
-          <button class="copy-btn">Sao chép</button>
-        `;
-        item.querySelector('.copy-btn').addEventListener('click', (e) => {
-          copyText(output, e.target);
-        });
-        stylesGrid.appendChild(item);
-      });
-    }
-
-    let activeCategory = Object.keys(charCategories)[0];
-
-    function renderTabs() {
-      charTabs.innerHTML = '';
-      Object.keys(charCategories).forEach(cat => {
-        const btn = document.createElement('button');
-        btn.className = 'char-tab' + (cat === activeCategory ? ' active' : '');
-        btn.textContent = cat;
-        btn.addEventListener('click', () => {
-          activeCategory = cat;
-          renderTabs();
-          renderChars();
-        });
-        charTabs.appendChild(btn);
-      });
-    }
-
-    function renderChars() {
-      charGrid.innerHTML = '';
-      const chars = charCategories[activeCategory] || [];
-      chars.forEach(ch => {
-        if (!ch.trim()) return;
-        const btn = document.createElement('button');
-        btn.className = 'char-btn';
-        btn.textContent = ch;
-        btn.title = 'Bấm để chèn';
-        btn.addEventListener('click', () => {
-          const start = inputEl.selectionStart;
-          const end = inputEl.selectionEnd;
-          const val = inputEl.value;
-          inputEl.value = val.slice(0, start) + ch + val.slice(end);
-          inputEl.focus();
-          inputEl.selectionStart = inputEl.selectionEnd = start + ch.length;
-          renderStyles();
-        });
-        charGrid.appendChild(btn);
-      });
-    }
-
-    inputEl.addEventListener('input', renderStyles);
-    inputEl.addEventListener('keyup', renderStyles);
-
+    document.getElementById('nameInput').addEventListener('input', renderStyles);
     renderStyles();
-    renderTabs();
-    renderChars();
   </script>
 </body>
 </html>
