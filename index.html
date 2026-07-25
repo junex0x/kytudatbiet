@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tạo Kí Tự Đặc Biệt Siêu Đẹp - dev Kim Yến ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    body.light-mode {
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e8eaf6 100%);
+      color: #333;
+    }
+
+    /* Container chính */
+    .container {
+      width: 100%;
+      max-width: 750px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 28px;
+      padding: 25px 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    body.light-mode .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+    }
+
+    /* Dark Mode Toggle Button */
+    .theme-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    body.light-mode .theme-btn {
+      background: #ff4d6d;
+      color: #fff;
+    }
+
+    /* Header dev Kim Yến */
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .admin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      box-shadow: 0 4px 15px rgba(255, 8, 68, 0.4);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a8edd9 0%, #fed6e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    body.light-mode h1 {
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    body.light-mode .subtitle { color: #666; }
+
+    /* Input & Tuỳ chỉnh */
+    .input-box {
+      margin-bottom: 18px;
+    }
+
+    .input-box label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #ffb3c1;
+    }
+
+    body.light-mode .input-box label { color: #ff3366; }
+
+    .main-input {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 700;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    body.light-mode .main-input {
+      background: #fff;
+      color: #333;
+      border-color: #ffd0d9;
+    }
+
+    .main-input:focus {
+      border-color: #ff4d6d;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+    }
+
+    /* Grid chọn Icon */
+    .decor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 500px) {
+      .decor-grid { grid-template-columns: 1fr; }
+    }
+
+    .decor-group select {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(30, 25, 60, 0.8);
+      color: #fff;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+      font-size: 0.88rem;
+    }
+
+    body.light-mode .decor-group select {
+      background: #fff;
+      color: #333;
+      border-color: #ffd0d9;
+    }
+
+    /* Tab Menu Phân Loại */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    .tabs::-webkit-scrollbar { height: 4px; }
+    .tabs::-webkit-scrollbar-thumb { background: #ff4d6d; border-radius: 4px; }
+
+    .tab-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: #aaa;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.2s;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+      color: #fff;
+    }
+
+    /* Danh sách Kết quả */
+    .result-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .result-list::-webkit-scrollbar { width: 5px; }
+    .result-list::-webkit-scrollbar-thumb { background: #ff4d6d; border-radius: 5px; }
+
+    .result-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 16px;
+      border-radius: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    body.light-mode .result-item {
+      background: #fff;
+      border-color: #ffe0e6;
+    }
+
+    .result-item:hover {
+      background: rgba(255, 77, 109, 0.15);
+      border-color: rgba(255, 77, 109, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .result-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    body.light-mode .result-text { color: #333; }
+
+    .btn-copy {
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+    }
+
+    /* Bộ Kí tự HOT copy nhanh */
+    .quick-symbols {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .symbol-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .symbol-tag {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: 600;
+    }
+
+    body.light-mode .symbol-tag {
+      background: #fff;
+      color: #444;
+      border: 1px solid #ffe0e6;
+    }
+
+    .symbol-tag:hover {
+      background: #ff4d6d;
+      color: #fff;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      background: #00b894;
+      color: #fff;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 800;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      display: none;
+      animation: fadeInUp 0.3s forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #888;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <button class="theme-btn" onclick="toggleTheme()" title="Đổi giao diện">
+      <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+
+    <div class="header">
+      <div class="admin-badge">
+        <i class="fa-solid fa-crown"></i> dev: Kim Yến
+      </div>
+      <h1>Tạo Kí Tự Đặc Biệt ✨</h1>
+      <p class="subtitle">Đổi kiểu chữ Game, Facebook, TikTok cực đỉnh!</p>
+    </div>
+
+    <div class="input-box">
+      <label for="nameInput"><i class="fa-solid fa-pen-nib"></i> Nhập tên của bạn vào đây:</label>
+      <input type="text" id="nameInput" class="main-input" placeholder="Nhập tên... (Ví dụ: Kim Yến)" value="Kim Yến">
+    </div>
+
+    <div class="decor-grid">
+      <div class="decor-group">
+        <select id="leftDecor" onchange="renderStyles()">
+          <option value="">-- Icon Trái --</option>
+          <option value="꧁༺">꧁༺ (Khung cánh 1)</option>
+          <option value="꧁">꧁ (Khung đẹp)</option>
+          <option value="✿">✿ (Bông hoa)</option>
+          <option value="★彡">★彡 (Ngôi sao)</option>
+          <option value="╰❥">╰❥ (Mũi tên tim)</option>
+          <option value="︵✰">︵✰ (Mây sao)</option>
+          <option value="⚡">⚡ (Sét)</option>
+          <option value="👑">👑 (Vương miện)</option>
+          <option value="亗">亗 (Mũ ngầu)</option>
+          <option value="「">「 (Ngoặc Nhật)</option>
+          <option value="『">『 (Ngoặc kép Nhật)</option>
+          <option value="【">【 (Ngoặc vuông)</option>
+          <option value="《">《 (Ngoặc kép)</option>
+          <option value="〖">〖 (Ngoặc kép 2)</option>
+          <option value="『✦">『✦ (Ngôi sao góc)</option>
+          <option value="❖">❖ (Kim cương)</option>
+          <option value="✧">✧ (Ngôi sao nhỏ)</option>
+          <option value="✪">✪ (Sao tròn)</option>
+          <option value="☆">☆ (Sao rỗng)</option>
+          <option value="★">★ (Sao đen)</option>
+          <option value="ღ">ღ (Tim Georgia)</option>
+          <option value="♡">♡ (Tim rỗng)</option>
+          <option value="♥">♥ (Tim đen)</option>
+          <option value="❀">❀ (Hoa)</option>
+          <option value="❁">❁ (Hoa lớn)</option>
+          <option value="✾">✾ (Hoa 8 cánh)</option>
+          <option value="❦">❦ (Lá Tim)</option>
+          <option value="❧">❧ (Lá)</option>
+          <option value="ツ">ツ (Mặt cười Nhật)</option>
+          <option value="※">※ (Tham chiếu)</option>
+          <option value="⌘">⌘ (Command)</option>
+          <option value="☾">☾ (Trăng)</option>
+          <option value="☽">☽ (Trăng non)</option>
+          <option value="✧･ﾟ">✧･ﾟ (Sao lấp lánh)</option>
+          <option value="꧁༒">꧁༒ (Khung kiếm)</option>
+          <option value="༺">༺ (Khung cánh đơn)</option>
+          <option value="『「">『「 (Ngoặc kép)</option>
+          <option value="【『">【『 (Khung kép)</option>
+          <option value="꧁ঔৣ">꧁ঔৣ (Khung cổ)</option>
+          <option value="⋆">⋆ (Sao nhỏ)</option>
+          <option value="✦">✦ (Ngôi sao 4 cánh)</option>
+          <option value="✧">✧ (Ngôi sao 4 cánh rỗng)</option>
+          <option value="★彡">★彡 (Sao + sọc)</option>
+          <option value="╰☆╮">╰☆╮ (Khung sao)</option>
+          <option value="╭∩╮">╭∩╮ (Mũ ngầu 2)</option>
+          <option value="╚">╚ (Góc dưới)</option>
+          <option value="╔">╔ (Góc trên)</option>
+          <option value="▓">▓ (Khối)</option>
+          <option value="░">░ (Khối mờ)</option>
+          <option value="█">█ (Khối đặc)</option>
+          <option value="▀">▀ (Nửa trên)</option>
+          <option value="▄">▄ (Nửa dưới)</option>
+          <option value="◆">◆ (Kim cương đen)</option>
+          <option value="◇">◇ (Kim cương rỗng)</option>
+          <option value="◈">◈ (Kim cương viền)</option>
+          <option value="◉">◉ (Vòng tròn)</option>
+          <option value="●">● (Chấm đen)</option>
+          <option value="○">○ (Chấm rỗng)</option>
+          <option value="◎">◎ (Chấm đôi)</option>
+          <option value="◐">◐ (Nửa tròn)</option>
+          <option value="◑">◑ (Nửa tròn 2)</option>
+          <option value="✧˖°">✧˖° (Sao lấp lánh 2)</option>
+          <option value="⋆｡˚">⋆｡˚ (Sao lấp lánh 3)</option>
+          <option value="꒰">꒰ (Ngoặc tròn)</option>
+          <option value="༄">༄ (Gió)</option>
+          <option value="༅">༅ (Gió 2)</option>
+          <option value="༆">༆ (Gió 3)</option>
+          <option value="༇">༇ (Gió 4)</option>
+          <option value="༈">༈ (Gió 5)</option>
+          <option value="༉">༉ (Gió 6)</option>
+          <option value="༊">༊ (Gió 7)</option>
+          <option value="་">་ (Chấm Tây Tạng)</option>
+          <option value="།">། (Chấm Tây Tạng 2)</option>
+          <option value="༎">༎ (Chấm Tây Tạng 3)</option>
+          <option value="༏">༏ (Chấm Tây Tạng 4)</option>
+          <option value="༐">༐ (Chấm Tây Tạng 5)</option>
+          <option value="༑">༑ (Chấm Tây Tạng 6)</option>
+          <option value="༒">༒ (Kiếm)</option>
+          <option value="༓">༓ (Mặt trăng)</option>
+          <option value="༔">༔ (Mặt trăng 2)</option>
+          <option value="༕">༕ (Mặt trăng 3)</option>
+          <option value="༖">༖ (Mặt trăng 4)</option>
+          <option value="༗">༗ (Mặt trăng 5)</option>
+          <option value="༘">༘ (Mặt trăng 6)</option>
+          <option value="༙">༙ (Mặt trăng 7)</option>
+          <option value="༚">༚ (Mặt trăng 8)</option>
+          <option value="༛">༛ (Mặt trăng 9)</option>
+          <option value="༜">༜ (Mặt trăng 10)</option>
+          <option value="༝">༝ (Mặt trăng 11)</option>
+          <option value="༞">༞ (Mặt trăng 12)</option>
+          <option value="༟">༟ (Mặt trăng 13)</option>
+          <option value="༠">༠ (Số 0 Tây Tạng)</option>
+          <option value="༡">༡ (Số 1 Tây Tạng)</option>
+          <option value="༢">༢ (Số 2 Tây Tạng)</option>
+          <option value="༣">༣ (Số 3 Tây Tạng)</option>
+          <option value="༤">༤ (Số 4 Tây Tạng)</option>
+          <option value="༥">༥ (Số 5 Tây Tạng)</option>
+          <option value="༦">༦ (Số 6 Tây Tạng)</option>
+          <option value="༧">༧ (Số 7 Tây Tạng)</option>
+          <option value="༨">༨ (Số 8 Tây Tạng)</option>
+          <option value="༩">༩ (Số 9 Tây Tạng)</option>
+          <option value="༪">༪ (Số 1/2)</option>
+          <option value="༫">༫ (Số 3/2)</option>
+          <option value="༬">༬ (Số 5/2)</option>
+          <option value="༭">༭ (Số 7/2)</option>
+          <option value="༮">༮ (Số 9/2)</option>
+          <option value="༯">༯ (Số 11/2)</option>
+          <option value="༰">༰ (Số 13/2)</option>
+          <option value="༱">༱ (Số 15/2)</option>
+          <option value="༲">༲ (Số 17/2)</option>
+          <option value="༳">༳ (Số 19/2)</option>
+          <option value="༴">༴ (Số 1/4)</option>
+          <option value="༵">༵ (Số 3/4)</option>
+          <option value="༶">༶ (Số 1/8)</option>
+          <option value="༷">༷ (Số 3/8)</option>
+          <option value="༸">༸ (Số 5/8)</option>
+          <option value="༹">༹ (Số 7/8)</option>
+          <option value="༺">༺ (Khung cánh)</option>
+          <option value="༻">༻ (Khung cánh phải)</option>
+          <option value="༼">༼ (Ngoặc Tây Tạng)</option>
+          <option value="༽">༽ (Ngoặc Tây Tạng phải)</option>
+          <option value="༾">༾ (Ngoặc Tây Tạng 2)</option>
+          <option value="༿">༿ (Ngoặc Tây Tạng 2 phải)</option>
+          <option value="ᚠ">ᚠ (Rune)</option>
+          <option value="ᚡ">ᚡ (Rune 2)</option>
+          <option value="ᚢ">ᚢ (Rune 3)</option>
+          <option value="ᚣ">ᚣ (Rune 4)</option>
+          <option value="ᚤ">ᚤ (Rune 5)</option>
+          <option value="ᚥ">ᚥ (Rune 6)</option>
+          <option value="ᚦ">ᚦ (Rune 7)</option>
+          <option value="ᚧ">ᚧ (Rune 8)</option>
+          <option value="ᚨ">ᚨ (Rune 9)</option>
+          <option value="ᚩ">ᚩ (Rune 10)</option>
+          <option value="ᚪ">ᚪ (Rune 11)</option>
+          <option value="ᚫ">ᚫ (Rune 12)</option>
+          <option value="ᚬ">ᚬ (Rune 13)</option>
+          <option value="ᚭ">ᚭ (Rune 14)</option>
+          <option value="ᚮ">ᚮ (Rune 15)</option>
+          <option value="ᚯ">ᚯ (Rune 16)</option>
+          <option value="ᚰ">ᚰ (Rune 17)</option>
+          <option value="ᚱ">ᚱ (Rune 18)</option>
+          <option value="ᚲ">ᚲ (Rune 19)</option>
+          <option value="ᚳ">ᚳ (Rune 20)</option>
+          <option value="ᚴ">ᚴ (Rune 21)</option>
+          <option value="ᚵ">ᚵ (Rune 22)</option>
+          <option value="ᚶ">ᚶ (Rune 23)</option>
+          <option value="ᚷ">ᚷ (Rune 24)</option>
+          <option value="ᚸ">ᚸ (Rune 25)</option>
+          <option value="ᚹ">ᚹ (Rune 26)</option>
+          <option value="ᚺ">ᚺ (Rune 27)</option>
+          <option value="ᚻ">ᚻ (Rune 28)</option>
+          <option value="ᚼ">ᚼ (Rune 29)</option>
+          <option value="ᚽ">ᚽ (Rune 30)</option>
+          <option value="ᚾ">ᚾ (Rune 31)</option>
+          <option value="ᚿ">ᚿ (Rune 32)</option>
+          <option value="ᛀ">ᛀ (Rune 33)</option>
+          <option value="ᛁ">ᛁ (Rune 34)</option>
+          <option value="ᛂ">ᛂ (Rune 35)</option>
+          <option value="ᛃ">ᛃ (Rune 36)</option>
+          <option value="ᛄ">ᛄ (Rune 37)</option>
+          <option value="ᛅ">ᛅ (Rune 38)</option>
+          <option value="ᛆ">ᛆ (Rune 39)</option>
+          <option value="ᛇ">ᛇ (Rune 40)</option>
+          <option value="ᛈ">ᛈ (Rune 41)</option>
+          <option value="ᛉ">ᛉ (Rune 42)</option>
+          <option value="ᛊ">ᛊ (Rune 43)</option>
+          <option value="ᛋ">ᛋ (Rune 44)</option>
+          <option value="ᛌ">ᛌ (Rune 45)</option>
+          <option value="ᛍ">ᛍ (Rune 46)</option>
+          <option value="ᛎ">ᛎ (Rune 47)</option>
+          <option value="ᛏ">ᛏ (Rune 48)</option>
+          <option value="ᛐ">ᛐ (Rune 49)</option>
+          <option value="ᛑ">ᛑ (Rune 50)</option>
+          <option value="ᛒ">ᛒ (Rune 51)</option>
+          <option value="ᛓ">ᛓ (Rune 52)</option>
+          <option value="ᛔ">ᛔ (Rune 53)</option>
+          <option value="ᛕ">ᛕ (Rune 54)</option>
+          <option value="ᛖ">ᛖ (Rune 55)</option>
+          <option value="ᛗ">ᛗ (Rune 56)</option>
+          <option value="ᛘ">ᛘ (Rune 57)</option>
+          <option value="ᛙ">ᛙ (Rune 58)</option>
+          <option value="ᛚ">ᛚ (Rune 59)</option>
+          <option value="ᛛ">ᛛ (Rune 60)</option>
+          <option value="ᛜ">ᛜ (Rune 61)</option>
+          <option value="ᛝ">ᛝ (Rune 62)</option>
+          <option value="ᛞ">ᛞ (Rune 63)</option>
+          <option value="ᛟ">ᛟ (Rune 64)</option>
+          <option value="ᛠ">ᛠ (Rune 65)</option>
+          <option value="ᛡ">ᛡ (Rune 66)</option>
+          <option value="ᛢ">ᛢ (Rune 67)</option>
+          <option value="ᛣ">ᛣ (Rune 68)</option>
+          <option value="ᛤ">ᛤ (Rune 69)</option>
+          <option value="ᛥ">ᛥ (Rune 70)</option>
+          <option value="ᛦ">ᛦ (Rune 71)</option>
+          <option value="ᛧ">ᛧ (Rune 72)</option>
+          <option value="ᛨ">ᛨ (Rune 73)</option>
+          <option value="ᛩ">ᛩ (Rune 74)</option>
+          <option value="ᛪ">ᛪ (Rune 75)</option>
+          <option value="᛫">᛫ (Rune 76)</option>
+          <option value="᛬">᛬ (Rune 77)</option>
+          <option value="᛭">᛭ (Rune 78)</option>
+          <option value="ᛮ">ᛮ (Rune 79)</option>
+          <option value="ᛯ">ᛯ (Rune 80)</option>
+          <option value="ᛰ">ᛰ (Rune 81)</option>
+        </select>
+      </div>
+
+      <div class="decor-group">
+        <select id="midDecor" onchange="renderStyles()">
+          <option value="">-- Kí Tự Giữa --</option>
+          <option value=" ">Mặc định (Khoảng trắng)</option>
+          <option value=".">K.i.m Y.ế.n (Dấu chấm)</option>
+          <option value="_">K_i_m Y_ế_n (Gạch dưới)</option>
+          <option value="★">K★i★m Y★ế★n (Ngôi sao)</option>
+          <option value="✿">K✿i✿m Y✿ế✿n (Hoa)</option>
+          <option value="♡">K♡i♡m Y♡ế♡n (Tim)</option>
+          <option value="♥">K♥i♥m Y♥ế♥n (Tim đen)</option>
+          <option value="✦">K✦i✦m Y✦ế✦n (Sao 4 cánh)</option>
+          <option value="✧">K✧i✧m Y✧ế✧n (Sao rỗng)</option>
+          <option value="⋆">K⋆i⋆m Y⋆ế⋆n (Sao nhỏ)</option>
+          <option value="・">K・i・m Y・ế・n (Chấm Nhật)</option>
+          <option value="‧">K‧i‧m Y‧ế‧n (Chấm giữa)</option>
+          <option value="•">K•i•m Y•ế•n (Chấm tròn)</option>
+          <option value="◦">K◦i◦m Y◦ế◦n (Chấm rỗng)</option>
+          <option value="∙">K∙i∙m Y∙ế∙n (Chấm nhỏ)</option>
+          <option value="▪">K▪i▪m Y▪ế▪n (Vuông nhỏ)</option>
+          <option value="▫">K▫i▫m Y▫ế▫n (Vuông rỗng)</option>
+          <option value="●">K●i●m Y●ế●n (Chấm đen)</option>
+          <option value="○">K○i○m Y○ế○n (Chấm rỗng)</option>
+          <option value="◎">K◎i◎m Y◎ế◎n (Chấm đôi)</option>
+          <option value="◉">K◉i◉m Y◉ế◉n (Chấm viền)</option>
+          <option value="◆">K◆i◆m Y◆ế◆n (Kim cương)</option>
+          <option value="◇">K◇i◇m Y◇ế◇n (Kim cương rỗng)</option>
+          <option value="◈">K◈i◈m Y◈ế◈n (Kim cương viền)</option>
+          <option value="❖">K❖i❖m Y❖ế❖n (Kim cương 2)</option>
+          <option value="·">K·i·m Y·ế·n (Chấm giữa)</option>
+          <option value="‧">K‧i‧m Y‧ế‧n (Chấm giữa 2)</option>
+          <option value="•">K•i•m Y•ế•n (Chấm tròn)</option>
+          <option value="-">K-i-m Y-ế-n (Gạch ngang)</option>
+          <option value="~">K~i~m Y~ế~n (Gợn sóng)</option>
+          <option value="≈">K≈i≈m Y≈ế≈n (Gần bằng)</option>
+          <option value="≠">K≠i≠m Y≠ế≠n (Không bằng)</option>
+          <option value="≡">K≡i≡m Y≡ế≡n (Đồng nhất)</option>
+          <option value="≤">K≤i≤m Y≤ế≤n (Nhỏ hơn bằng)</option>
+          <option value="≥">K≥i≥m Y≥ế≥n (Lớn hơn bằng)</option>
+          <option value="±">K±i±m Y±ế±n (Cộng trừ)</option>
+          <option value="×">K×i×m Y×ế×n (Nhân)</option>
+          <option value="÷">K÷i÷m Y÷ế÷n (Chia)</option>
+          <option value="∞">K∞i∞m Y∞ế∞n (Vô cực)</option>
+          <option value="∑">K∑i∑m Y∑ế∑n (Tổng)</option>
+          <option value="∏">K∏i∏m Y∏ế∏n (Tích)</option>
+          <option value="√">K√i√m Y√ế√n (Căn)</option>
+          <option value="∫">K∫i∫m Y∫ế∫n (Tích phân)</option>
+          <option value="∂">K∂i∂m Y∂ế∂n (Đạo hàm)</option>
+          <option value="∆">K∆i∆m Y∆ế∆n (Delta)</option>
+          <option value="∇">K∇i∇m Y∇ế∇n (Nabla)</option>
+          <option value="∈">K∈i∈m Y∈ế∈n (Thuộc)</option>
+          <option value="∉">K∉i∉m Y∉ế∉n (Không thuộc)</option>
+          <option value="∋">K∋i∋m Y∋ế∋n (Chứa)</option>
+          <option value="∌">K∌i∌m Y∌ế∌n (Không chứa)</option>
+          <option value="⊂">K⊂i⊂m Y⊂ế⊂n (Tập con)</option>
+          <option value="⊃">K⊃i⊃m Y⊃ế⊃n (Tập cha)</option>
+          <option value="⊆">K⊆i⊆m Y⊆ế⊆n (Tập con bằng)</option>
+          <option value="⊇">K⊇i⊇m Y⊇ế⊇n (Tập cha bằng)</option>
+          <option value="∪">K∪i∪m Y∪ế∪n (Hợp)</option>
+          <option value="∩">K∩i∩m Y∩ế∩n (Giao)</option>
+          <option value="∅">K∅i∅m Y∅ế∅n (Rỗng)</option>
+          <option value="∀">K∀i∀m Y∀ế∀n (Với mọi)</option>
+          <option value="∃">K∃i∃m Y∃ế∃n (Tồn tại)</option>
+          <option value="∄">K∄i∄m Y∄ế∄n (Không tồn tại)</option>
+          <option value="∴">K∴i∴m Y∴ế∴n (Do đó)</option>
+          <option value="∵">K∵i∵m Y∵ế∵n (Bởi vì)</option>
+          <option value="∶">K∶i∶m Y∶ế∶n (Tỷ lệ)</option>
+          <option value="∷">K∷i∷m Y∷ế∷n (Tỷ lệ 2)</option>
+          <option value="∼">K∼i∼m Y∼ế∼n (Tương tự)</option>
+          <option value="∽">K∽i∽m Y∽ế∽n (Tương tự ngược)</option>
+          <option value="≅">K≅i≅m Y≅ế≅n (Đồng dạng)</option>
+          <option value="≈">K≈i≈m Y≈ế≈n (Gần bằng)</option>
+          <option value="≇">K≇i≇m Y≇ế≇n (Không đồng dạng)</option>
+          <option value="≉">K≉i≉m Y≉ế≉n (Không gần bằng)</option>
+          <option value="≡">K≡i≡m Y≡ế≡n (Đồng nhất)</option>
+          <option value="≢">K≢i≢m Y≢ế≢n (Không đồng nhất)</option>
+          <option value="≤">K≤i≤m Y≤ế≤n (Nhỏ hơn bằng)</option>
+          <option value="≥">K≥i≥m Y≥ế≥n (Lớn hơn bằng)</option>
+          <option value="≦">K≦i≦m Y≦ế≦n (Nhỏ hơn bằng 2)</option>
+          <option value="≧">K≧i≧m Y≧ế≧n (Lớn hơn bằng 2)</option>
+          <option value="≪">K≪i≪m Y≪ế≪n (Nhỏ hơn nhiều)</option>
+          <option value="≫">K≫i≫m Y≫ế≫n (Lớn hơn nhiều)</option>
+          <option value="≮">K≮i≮m Y≮ế≮n (Không nhỏ hơn)</option>
+          <option value="≯">K≯i≯m Y≯ế≯n (Không lớn hơn)</option>
+          <option value="≰">K≰i≰m Y≰ế≰n (Không nhỏ hơn bằng)</option>
+          <option value="≱">K≱i≱m Y≱ế≱n (Không lớn hơn bằng)</option>
+          <option value="≲">K≲i≲m Y≲ế≲n (Nhỏ hơn hoặc tương đương)</option>
+          <option value="≳">K≳i≳m Y≳ế≳n (Lớn hơn hoặc tương đương)</option>
+          <option value="≴">K≴i≴m Y≴ế≴n (Không nhỏ hơn hoặc tương đương)</option>
+          <option value="≵">K≵i≵m Y≵ế≵n (Không lớn hơn hoặc tương đương)</option>
+          <option value="≶">K≶i≶m Y≶ế≶n (Nhỏ hơn hoặc lớn hơn)</option>
+          <option value="≷">K≷i≷m Y≷ế≷n (Lớn hơn hoặc nhỏ hơn)</option>
+          <option value="≸">K≸i≸m Y≸ế≸n (Không nhỏ hơn hoặc lớn hơn)</option>
+          <option value="≹">K≹i≹m Y≹ế≹n (Không lớn hơn hoặc nhỏ hơn)</option>
+          <option value="≺">K≺i≺m Y≺ế≺n (Trước)</option>
+          <option value="≻">K≻i≻m Y≻ế≻n (Sau)</option>
+          <option value="≼">K≼i≼m Y≼ế≼n (Trước hoặc bằng)</option>
+          <option value="≽">K≽i≽m Y≽ế≽n (Sau hoặc bằng)</option>
+          <option value="≾">K≾i≾m Y≾ế≾n (Trước hoặc tương đương)</option>
+          <option value="≿">K≿i≿m Y≿ế≿n (Sau hoặc tương đương)</option>
+          <option value="⊀">K⊀i⊀m Y⊀ế⊀n (Không trước)</option>
+          <option value="⊁">K⊁i⊁m Y⊁ế⊁n (Không sau)</option>
+          <option value="⊂">K⊂i⊂m Y⊂ế⊂n (Tập con)</option>
+          <option value="⊃">K⊃i⊃m Y⊃ế⊃n (Tập cha)</option>
+          <option value="⊄">K⊄i⊄m Y⊄ế⊄n (Không tập con)</option>
+          <option value="⊅">K⊅i⊅m Y⊅ế⊅n (Không tập cha)</option>
+          <option value="⊆">K⊆i⊆m Y⊆ế⊆n (Tập con bằng)</option>
+          <option value="⊇">K⊇i⊇m Y⊇ế⊇n (Tập cha bằng)</option>
+          <option value="⊈">K⊈i⊈m Y⊈ế⊈n (Không tập con bằng)</option>
+          <option value="⊉">K⊉i⊉m Y⊉ế⊉n (Không tập cha bằng)</option>
+          <option value="⊊">K⊊i⊊m Y⊊ế⊊n (Tập con thực sự)</option>
+          <option value="⊋">K⊋i⊋m Y⊋ế⊋n (Tập cha thực sự)</option>
+          <option value="⊌">K⊌i⊌m Y⊌ế⊌n (Hợp đa)</option>
+          <option value="⊍">K⊍i⊍m Y⊍ế⊍n (Hợp đa 2)</option>
+          <option value="⊎">K⊎i⊎m Y⊎ế⊎n (Hợp đa 3)</option>
+          <option value="⊏">K⊏i⊏m Y⊏ế⊏n (Hình vuông trái)</option>
+          <option value="⊐">K⊐i⊐m Y⊐ế⊐n (Hình vuông phải)</option>
+          <option value="⊑">K⊑i⊑m Y⊑ế⊑n (Hình vuông trái bằng)</option>
+          <option value="⊒">K⊒i⊒m Y⊒ế⊒n (Hình vuông phải bằng)</option>
+          <option value="⊓">K⊓i⊓m Y⊓ế⊓n (Giao vuông)</option>
+          <option value="⊔">K⊔i⊔m Y⊔ế⊔n (Hợp vuông)</option>
+          <option value="⊕">K⊕i⊕m Y⊕ế⊕n (Cộng tròn)</option>
+          <option value="⊖">K⊖i⊖m Y⊖ế⊖n (Trừ tròn)</option>
+          <option value="⊗">K⊗i⊗m Y⊗ế⊗n (Nhân tròn)</option>
+          <option value="⊘">K⊘i⊘m Y⊘ế⊘n (Chia tròn)</option>
+          <option value="⊙">K⊙i⊙m Y⊙ế⊙n (Chấm tròn)</option>
+          <option value="⊚">K⊚i⊚m Y⊚ế⊚n (Chấm tròn 2)</option>
+          <option value="⊛">K⊛i⊛m Y⊛ế⊛n (Sao tròn)</option>
+          <option value="⊜">K⊜i⊜m Y⊜ế⊜n (Bằng tròn)</option>
+          <option value="⊝">K⊝i⊝m Y⊝ế⊝n (Gạch tròn)</option>
+          <option value="⊞">K⊞i⊞m Y⊞ế⊞n (Cộng vuông)</option>
+          <option value="⊟">K⊟i⊟m Y⊟ế⊟n (Trừ vuông)</option>
+          <option value="⊠">K⊠i⊠m Y⊠ế⊠n (Nhân vuông)</option>
+          <option value="⊡">K⊡i⊡m Y⊡ế⊡n (Chấm vuông)</option>
+          <option value="⊢">K⊢i⊢m Y⊢ế⊢n (Chứng minh)</option>
+          <option value="⊣">K⊣i⊣m Y⊣ế⊣n (Chứng minh ngược)</option>
+          <option value="⊤">K⊤i⊤m Y⊤ế⊤n (Đỉnh)</option>
+          <option value="⊥">K⊥i⊥m Y⊥ế⊥n (Đáy)</option>
+          <option value="⊦">K⊦i⊦m Y⊦ế⊦n (Chứng minh 2)</option>
+          <option value="⊧">K⊧i⊧m Y⊧ế⊧n (Mô hình)</option>
+          <option value="⊨">K⊨i⊨m Y⊨ế⊨n (Đúng)</option>
+          <option value="⊩">K⊩i⊩m Y⊩ế⊩n (Buộc)</option>
+          <option value="⊪">K⊪i⊪m Y⊪ế⊪n (Buộc 2)</option>
+          <option value="⊫">K⊫i⊫m Y⊫ế⊫n (Buộc 3)</option>
+          <option value="⊬">K⊬i⊬m Y⊬ế⊬n (Không chứng minh)</option>
+          <option value="⊭">K⊭i⊭m Y⊭ế⊭n (Không đúng)</option>
+          <option value="⊮">K⊮i⊮m Y⊮ế⊮n (Không buộc)</option>
+          <option value="⊯">K⊯i⊯m Y⊯ế⊯n (Không buộc 2)</option>
+          <option value="⊰">K⊰i⊰m Y⊰ế⊰n (Trước 2)</option>
+          <option value="⊱">K⊱i⊱m Y⊱ế⊱n (Sau 2)</option>
+          <option value="⊲">K⊲i⊲m Y⊲ế⊲n (Tam giác trái)</option>
+          <option value="⊳">K⊳i⊳m Y⊳ế⊳n (Tam giác phải)</option>
+          <option value="⊴">K⊴i⊴m Y⊴ế⊴n (Tam giác trái bằng)</option>
+          <option value="⊵">K⊵i⊵m Y⊵ế⊵n (Tam giác phải bằng)</option>
+          <option value="⊶">K⊶i⊶m Y⊶ế⊶n (Gốc)</option>
+          <option value="⊷">K⊷i⊷m Y⊷ế⊷n (Hình ảnh)</option>
+          <option value="⊸">K⊸i⊸m Y⊸ế⊸n (Đa tuyến)</option>
+          <option value="⊹">K⊹i⊹m Y⊹ế⊹n (Hermitian)</option>
+          <option value="⊺">K⊺i⊺m Y⊺ế⊺n (Chuyển vị)</option>
+          <option value="⊻">K⊻i⊻m Y⊻ế⊻n (XOR)</option>
+          <option value="⊼">K⊼i⊼m Y⊼ế⊼n (NAND)</option>
+          <option value="⊽">K⊽i⊽m Y⊽ế⊽n (NOR)</option>
+          <option value="⊾">K⊾i⊾m Y⊾ế⊾n (Góc phải)</option>
+          <option value="⊿">K⊿i⊿m Y⊿ế⊿n (Tam giác)</option>
+          <option value="⋀">K⋀i⋀m Y⋀ế⋀n (Và lớn)</option>
+          <option value="⋁">K⋁i⋁m Y⋁ế⋁n (Hoặc lớn)</option>
+          <option value="⋂">K⋂i⋂m Y⋂ế⋂n (Giao lớn)</option>
+          <option value="⋃">K⋃i⋃m Y⋃ế⋃n (Hợp lớn)</option>
+          <option value="⋄">K⋄i⋄m Y⋄ế⋄n (Kim cương)</option>
+          <option value="⋅">K⋅i⋅m Y⋅ế⋅n (Nhân chấm)</option>
+          <option value="⋆">K⋆i⋆m Y⋆ế⋆n (Sao)</option>
+          <option value="⋇">K⋇i⋇m Y⋇ế⋇n (Chia)</option>
+          <option value="⋈">K⋈i⋈m Y⋈ế⋈n (Tham gia)</option>
+          <option value="⋉">K⋉i⋉m Y⋉ế⋉n (Bán trực tiếp trái)</option>
+          <option value="⋊">K⋊i⋊m Y⋊ế⋊n (Bán trực tiếp phải)</option>
+          <option value="⋋">K⋋i⋋m Y⋋ế⋋n (Bán trực tiếp trái 2)</option>
+          <option value="⋌">K⋌i⋌m Y⋌ế⋌n (Bán trực tiếp phải 2)</option>
+          <option value="⋍">K⋍i⋍m Y⋍ế⋍n (Gần bằng ngược)</option>
+          <option value="⋎">K⋎i⋎m Y⋎ế⋎n (Hoặc cong)</option>
+          <option value="⋏">K⋏i⋏m Y⋏ế⋏n (Và cong)</option>
+          <option value="⋐">K⋐i⋐m Y⋐ế⋐n (Tập con kép)</option>
+          <option value="⋑">K⋑i⋑m Y⋑ế⋑n (Tập cha kép)</option>
+          <option value="⋒">K⋒i⋒m Y⋒ế⋒n (Giao kép)</option>
+          <option value="⋓">K⋓i⋓m Y⋓ế⋓n (Hợp kép)</option>
+          <option value="⋔">K⋔i⋔m Y⋔ế⋔n (Giao nhau)</option>
+          <option value="⋕">K⋕i⋕m Y⋕ế⋕n (Song song bằng)</option>
+          <option value="⋖">K⋖i⋖m Y⋖ế⋖n (Nhỏ hơn chấm)</option>
+          <option value="⋗">K⋗i⋗m Y⋗ế⋗n (Lớn hơn chấm)</option>
+          <option value="⋘">K⋘i⋘m Y⋘ế⋘n (Nhỏ hơn rất nhiều)</option>
+          <option value="⋙">K⋙i⋙m Y⋙ế⋙n (Lớn hơn rất nhiều)</option>
+          <option value="⋚">K⋚i⋚m Y⋚ế⋚n (Nhỏ hơn bằng lớn hơn)</option>
+          <option value="⋛">K⋛i⋛m Y⋛ế⋛n (Lớn hơn bằng nhỏ hơn)</option>
+          <option value="⋜">K⋜i⋜m Y⋜ế⋜n (Bằng nhỏ hơn)</option>
+          <option value="⋝">K⋝i⋝m Y⋝ế⋝n (Bằng lớn hơn)</option>
+          <option value="⋞">K⋞i⋞m Y⋞ế⋞n (Bằng trước)</option>
+          <option value="⋟">K⋟i⋟m Y⋟ế⋟n (Bằng sau)</option>
+          <option value="⋠">K⋠i⋠m Y⋠ế⋠n (Không trước bằng)</option>
+          <option value="⋡">K⋡i⋡m Y⋡ế⋡n (Không sau bằng)</option>
+          <option value="⋢">K⋢i⋢m Y⋢ế⋢n (Không hình vuông trái bằng)</option>
+          <option value="⋣">K⋣i⋣m Y⋣ế⋣n (Không hình vuông phải bằng)</option>
+          <option value="⋤">K⋤i⋤m Y⋤ế⋤n (Hình vuông trái thực sự)</option>
+          <option value="⋥">K⋥i⋥m Y⋥ế⋥n (Hình vuông phải thực sự)</option>
+          <option value="⋦">K⋦i⋦m Y⋦ế⋦n (Nhỏ hơn không tương đương)</option>
+          <option value="⋧">K⋧i⋧m Y⋧ế⋧n (Lớn hơn không tương đương)</option>
+          <option value="⋨">K⋨i⋨m Y⋨ế⋨n (Trước không tương đương)</option>
+          <option value="⋩">K⋩i⋩m Y⋩ế⋩n (Sau không tương đương)</option>
+          <option value="⋪">K⋪i⋪m Y⋪ế⋪n (Không tam giác trái)</option>
+          <option value="⋫">K⋫i⋫m Y⋫ế⋫n (Không tam giác phải)</option>
+          <option value="⋬">K⋬i⋬m Y⋬ế⋬n (Không tam giác trái bằng)</option>
+          <option value="⋭">K⋭i⋭m Y⋭ế⋭n (Không tam giác phải bằng)</option>
+          <option value="⋮">K⋮i⋮m Y⋮ế⋮n (Ba chấm dọc)</option>
+          <option value="⋯">K⋯i⋯m Y⋯ế⋯n (Ba chấm ngang)</option>
+          <option value="⋰">K⋰i⋰m Y⋰ế⋰n (Ba chấm chéo lên)</option>
+          <option value="⋱">K⋱i⋱m Y⋱ế⋱n (Ba chấm chéo xuống)</option>
+          <option value="⋲">K⋲i⋲m Y⋲ế⋲n (Thuộc với thanh ngang)</option>
+          <option value="⋳">K⋳i⋳m Y⋳ế⋳n (Thuộc với thanh dọc)</option>
+          <option value="⋴">K⋴i⋴m Y⋴ế⋴n (Thuộc nhỏ)</option>
+          <option value="⋵">K⋵i⋵m Y⋵ế⋵n (Thuộc với chấm)</option>
+          <option value="⋶">K⋶i∈m Y∈ế∈n (Thuộc với thanh trên)</option>
+          <option value="⋷">K⋷i∈m Y∈ế∈n (Thuộc với thanh dưới)</option>
+          <option value="⋸">K⋸i∈m Y∈ế∈n (Thuộc với hai thanh ngang)</option>
+          <option value="⋹">K⋹i∈m Y∈ế∈n (Thuộc với hai thanh dọc)</option>
+          <option value="⋺">K⋺i∋m Y∋ế∋n (Chứa với thanh ngang)</option>
+          <option value="⋻">K⋻i∋m Y∋ế∋n (Chứa với thanh dọc)</option>
+          <option value="⋼">K⋼i∋m Y∋ế∋n (Chứa nhỏ)</option>
+          <option value="⋽">K⋽i∋m Y∋ế∋n (Chứa với thanh trên)</option>
+          <option value="⋾">K⋾i∋m Y∋ế∋n (Chứa với thanh dưới)</option>
+          <option value="⋿">K⋿i∈m Y∈ế∈n (Thuộc lớn)</option>
+        </select>
+      </div>
+
+      <div class="decor-group">
+        <select id="rightDecor" onchange="renderStyles()">
+          <option value="">-- Icon Phải --</option>
+          <option value="༻꧂">༻꧂ (Khung cánh 1)</option>
+          <option value="꧂">꧂ (Khung đẹp)</option>
+          <option value="✿">✿ (Bông hoa)</option>
+          <option value="彡★">彡★ (Ngôi sao)</option>
+          <option value="❣">❣ (Trái tim)</option>
+          <option value="✰︵">✰︵ (Mây sao)</option>
+          <option value="⚡">⚡ (Sét)</option>
+          <option value="👑">👑 (Vương miện)</option>
+          <option value="」">」 (Ngoặc Nhật)</option>
+          <option value="』">』 (Ngoặc kép Nhật)</option>
+          <option value="】">】 (Ngoặc vuông)</option>
+          <option value="》">》 (Ngoặc kép)</option>
+          <option value="〗">〗 (Ngoặc kép 2)</option>
+          <option value="✦』">✦』 (Ngôi sao góc)</option>
+          <option value="❖">❖ (Kim cương)</option>
+          <option value="✧">✧ (Ngôi sao nhỏ)</option>
+          <option value="✪">✪ (Sao tròn)</option>
+          <option value="☆">☆ (Sao rỗng)</option>
+          <option value="★">★ (Sao đen)</option>
+          <option value="ღ">ღ (Tim Georgia)</option>
+          <option value="♡">♡ (Tim rỗng)</option>
+          <option value="♥">♥ (Tim đen)</option>
+          <option value="❀">❀ (Hoa)</option>
+          <option value="❁">❁ (Hoa lớn)</option>
+          <option value="✾">✾ (Hoa 8 cánh)</option>
+          <option value="❦">❦ (Lá Tim)</option>
+          <option value="❧">❧ (Lá)</option>
+          <option value="ツ">ツ (Mặt cười Nhật)</option>
+          <option value="※">※ (Tham chiếu)</option>
+          <option value="⌘">⌘ (Command)</option>
+          <option value="☾">☾ (Trăng)</option>
+          <option value="☽">☽ (Trăng non)</option>
+          <option value="･ﾟ✧">･ﾟ✧ (Sao lấp lánh)</option>
+          <option value="༒꧂">༒꧂ (Khung kiếm)</option>
+          <option value="༻">༻ (Khung cánh đơn)</option>
+          <option value="」』">」』 (Ngoặc kép)</option>
+          <option value="』】">』】 (Khung kép)</option>
+          <option value="ঔৣ꧂">ঔৣ꧂ (Khung cổ)</option>
+          <option value="⋆">⋆ (Sao nhỏ)</option>
+          <option value="✦">✦ (Ngôi sao 4 cánh)</option>
+          <option value="✧">✧ (Ngôi sao 4 cánh rỗng)</option>
+          <option value="彡★">彡★ (Sao + sọc)</option>
+          <option value="╰☆╮">╰☆╮ (Khung sao)</option>
+          <option value="╭∩╮">╭∩╮ (Mũ ngầu 2)</option>
+          <option value="╝">╝ (Góc dưới)</option>
+          <option value="╗">╗ (Góc trên)</option>
+          <option value="▓">▓ (Khối)</option>
+          <option value="░">░ (Khối mờ)</option>
+          <option value="█">█ (Khối đặc)</option>
+          <option value="▀">▀ (Nửa trên)</option>
+          <option value="▄">▄ (Nửa dưới)</option>
+          <option value="◆">◆ (Kim cương đen)</option>
+          <option value="◇">◇ (Kim cương rỗng)</option>
+          <option value="◈">◈ (Kim cương viền)</option>
+          <option value="◉">◉ (Vòng tròn)</option>
+          <option value="●">● (Chấm đen)</option>
+          <option value="○">○ (Chấm rỗng)</option>
+          <option value="◎">◎ (Chấm đôi)</option>
+          <option value="◐">◐ (Nửa tròn)</option>
+          <option value="◑">◑ (Nửa tròn 2)</option>
+          <option value="°˖✧">°˖✧ (Sao lấp lánh 2)</option>
+          <option value="˚｡⋆">˚｡⋆ (Sao lấp lánh 3)</option>
+          <option value="꒱">꒱ (Ngoặc tròn)</option>
+          <option value="༄">༄ (Gió)</option>
+          <option value="༅">༅ (Gió 2)</option>
+          <option value="༆">༆ (Gió 3)</option>
+          <option value="༇">༇ (Gió 4)</option>
+          <option value="༈">༈ (Gió 5)</option>
+          <option value="༉">༉ (Gió 6)</option>
+          <option value="༊">༊ (Gió 7)</option>
+          <option value="་">་ (Chấm Tây Tạng)</option>
+          <option value="།">། (Chấm Tây Tạng 2)</option>
+          <option value="༎">༎ (Chấm Tây Tạng 3)</option>
+          <option value="༏">༏ (Chấm Tây Tạng 4)</option>
+          <option value="༐">༐ (Chấm Tây Tạng 5)</option>
+          <option value="༑">༑ (Chấm Tây Tạng 6)</option>
+          <option value="༒">༒ (Kiếm)</option>
+          <option value="༓">༓ (Mặt trăng)</option>
+          <option value="༔">༔ (Mặt trăng 2)</option>
+          <option value="༕">༕ (Mặt trăng 3)</option>
+          <option value="༖">༖ (Mặt trăng 4)</option>
+          <option value="༗">༗ (Mặt trăng 5)</option>
+          <option value="༘">༘ (Mặt trăng 6)</option>
+          <option value="༙">༙ (Mặt trăng 7)</option>
+          <option value="༚">༚ (Mặt trăng 8)</option>
+          <option value="༛">༛ (Mặt trăng 9)</option>
+          <option value="༜">༜ (Mặt trăng 10)</option>
+          <option value="༝">༝ (Mặt trăng 11)</option>
+          <option value="༞">༞ (Mặt trăng 12)</option>
+          <option value="༟">༟ (Mặt trăng 13)</option>
+          <option value="༠">༠ (Số 0 Tây Tạng)</option>
+          <option value="༡">༡ (Số 1 Tây Tạng)</option>
+          <option value="༢">༢ (Số 2 Tây Tạng)</option>
+          <option value="༣">༣ (Số 3 Tây Tạng)</option>
+          <option value="༤">༤ (Số 4 Tây Tạng)</option>
+          <option value="༥">༥ (Số 5 Tây Tạng)</option>
+          <option value="༦">༦ (Số 6 Tây Tạng)</option>
+          <option value="༧">༧ (Số 7 Tây Tạng)</option>
+          <option value="༨">༨ (Số 8 Tây Tạng)</option>
+          <option value="༩">༩ (Số 9 Tây Tạng)</option>
+          <option value="༪">༪ (Số 1/2)</option>
+          <option value="༫">༫ (Số 3/2)</option>
+          <option value="༬">༬ (Số 5/2)</option>
+          <option value="༭">༭ (Số 7/2)</option>
+          <option value="༮">༮ (Số 9/2)</option>
+          <option value="༯">༯ (Số 11/2)</option>
+          <option value="༰">༰ (Số 13/2)</option>
+          <option value="༱">༱ (Số 15/2)</option>
+          <option value="༲">༲ (Số 17/2)</option>
+          <option value="༳">༳ (Số 19/2)</option>
+          <option value="༴">༴ (Số 1/4)</option>
+          <option value="༵">༵ (Số 3/4)</option>
+          <option value="༶">༶ (Số 1/8)</option>
+          <option value="༷">༷ (Số 3/8)</option>
+          <option value="༸">༸ (Số 5/8)</option>
+          <option value="༹">༹ (Số 7/8)</option>
+          <option value="༺">༺ (Khung cánh)</option>
+          <option value="༻">༻ (Khung cánh phải)</option>
+          <option value="༼">༼ (Ngoặc Tây Tạng)</option>
+          <option value="༽">༽ (Ngoặc Tây Tạng phải)</option>
+          <option value="༾">༾ (Ngoặc Tây Tạng 2)</option>
+          <option value="༿">༿ (Ngoặc Tây Tạng 2 phải)</option>
+          <option value="ᚠ">ᚠ (Rune)</option>
+          <option value="ᚡ">ᚡ (Rune 2)</option>
+          <option value="ᚢ">ᚢ (Rune 3)</option>
+          <option value="ᚣ">ᚣ (Rune 4)</option>
+          <option value="ᚤ">ᚤ (Rune 5)</option>
+          <option value="ᚥ">ᚥ (Rune 6)</option>
+          <option value="ᚦ">ᚦ (Rune 7)</option>
+          <option value="ᚧ">ᚧ (Rune 8)</option>
+          <option value="ᚨ">ᚨ (Rune 9)</option>
+          <option value="ᚩ">ᚩ (Rune 10)</option>
+          <option value="ᚪ">ᚪ (Rune 11)</option>
+          <option value="ᚫ">ᚫ (Rune 12)</option>
+          <option value="ᚬ">ᚬ (Rune 13)</option>
+          <option value="ᚭ">ᚭ (Rune 14)</option>
+          <option value="ᚮ">ᚮ (Rune 15)</option>
+          <option value="ᚯ">ᚯ (Rune 16)</option>
+          <option value="ᚰ">ᚰ (Rune 17)</option>
+          <option value="ᚱ">ᚱ (Rune 18)</option>
+          <option value="ᚲ">ᚲ (Rune 19)</option>
+          <option value="ᚳ">ᚳ (Rune 20)</option>
+          <option value="ᚴ">ᚴ (Rune 21)</option>
+          <option value="ᚵ">ᚵ (Rune 22)</option>
+          <option value="ᚶ">ᚶ (Rune 23)</option>
+          <option value="ᚷ">ᚷ (Rune 24)</option>
+          <option value="ᚸ">ᚸ (Rune 25)</option>
+          <option value="ᚹ">ᚹ (Rune 26)</option>
+          <option value="ᚺ">ᚺ (Rune 27)</option>
+          <option value="ᚻ">ᚻ (Rune 28)</option>
+          <option value="ᚼ">ᚼ (Rune 29)</option>
+          <option value="ᚽ">ᚽ (Rune 30)</option>
+          <option value="ᚾ">ᚾ (Rune 31)</option>
+          <option value="ᚿ">ᚿ (Rune 32)</option>
+          <option value="ᛀ">ᛀ (Rune 33)</option>
+          <option value="ᛁ">ᛁ (Rune 34)</option>
+          <option value="ᛂ">ᛂ (Rune 35)</option>
+          <option value="ᛃ">ᛃ (Rune 36)</option>
+          <option value="ᛄ">ᛄ (Rune 37)</option>
+          <option value="ᛅ">ᛅ (Rune 38)</option>
+          <option value="ᛆ">ᛆ (Rune 39)</option>
+          <option value="ᛇ">ᛇ (Rune 40)</option>
+          <option value="ᛈ">ᛈ (Rune 41)</option>
+          <option value="ᛉ">ᛉ (Rune 42)</option>
+          <option value="ᛊ">ᛊ (Rune 43)</option>
+          <option value="ᛋ">ᛋ (Rune 44)</option>
+          <option value="ᛌ">ᛌ (Rune 45)</option>
+          <option value="ᛍ">ᛍ (Rune 46)</option>
+          <option value="ᛎ">ᛎ (Rune 47)</option>
+          <option value="ᛏ">ᛏ (Rune 48)</option>
+          <option value="ᛐ">ᛐ (Rune 49)</option>
+          <option value="ᛑ">ᛑ (Rune 50)</option>
+          <option value="ᛒ">ᛒ (Rune 51)</option>
+          <option value="ᛓ">ᛓ (Rune 52)</option>
+          <option value="ᛔ">ᛔ (Rune 53)</option>
+          <option value="ᛕ">ᛕ (Rune 54)</option>
+          <option value="ᛖ">ᛖ (Rune 55)</option>
+          <option value="ᛗ">ᛗ (Rune 56)</option>
+          <option value="ᛘ">ᛘ (Rune 57)</option>
+          <option value="ᛙ">ᛙ (Rune 58)</option>
+          <option value="ᛚ">ᛚ (Rune 59)</option>
+          <option value="ᛛ">ᛛ (Rune 60)</option>
+          <option value="ᛜ">ᛜ (Rune 61)</option>
+          <option value="ᛝ">ᛝ (Rune 62)</option>
+          <option value="ᛞ">ᛞ (Rune 63)</option>
+          <option value="ᛟ">ᛟ (Rune 64)</option>
+          <option value="ᛠ">ᛠ (Rune 65)</option>
+          <option value="ᛡ">ᛡ (Rune 66)</option>
+          <option value="ᛢ">ᛢ (Rune 67)</option>
+          <option value="ᛣ">ᛣ (Rune 68)</option>
+          <option value="ᛤ">ᛤ (Rune 69)</option>
+          <option value="ᛥ">ᛥ (Rune 70)</option>
+          <option value="ᛦ">ᛦ (Rune 71)</option>
+          <option value="ᛧ">ᛧ (Rune 72)</option>
+          <option value="ᛨ">ᛨ (Rune 73)</option>
+          <option value="ᛩ">ᛩ (Rune 74)</option>
+          <option value="ᛪ">ᛪ (Rune 75)</option>
+          <option value="᛫">᛫ (Rune 76)</option>
+          <option value="᛬">᛬ (Rune 77)</option>
+          <option value="᛭">᛭ (Rune 78)</option>
+          <option value="ᛮ">ᛮ (Rune 79)</option>
+          <option value="ᛯ">ᛯ (Rune 80)</option>
+          <option value="ᛰ">ᛰ (Rune 81)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('all')">Tất Cả Kiểu</button>
+      <button class="tab-btn" onclick="switchTab('game')">Tên Game HOT</button>
+      <button class="tab-btn" onclick="switchTab('fonts')">Font Unicode Đẹp</button>
+      <button class="tab-btn" onclick="switchTab('kaomoji')">Kaomoji Mặt Cười</button>
+      <button class="tab-btn" onclick="switchTab('numbers')">Chữ Số Độc Lạ</button>
+    </div>
+
+    <div class="result-list" id="resultList">
+      </div>
+
+    <div class="quick-symbols">
+      <div class="input-box">
+        <label><i class="fa-solid fa-fire"></i> Bộ Kí Tự Icon Đặt Tên Game Sao Chép Nhanh:</label>
+      </div>
+      <div class="symbol-tags">
+        <span class="symbol-tag" onclick="copyText('꧁༺✿ Kim Yến ✿༻꧂')">꧁༺✿ Kim Yến ✿༻꧂</span>
+        <span class="symbol-tag" onclick="copyText('亗')">亗</span>
+        <span class="symbol-tag" onclick="copyText('✿')">✿</span>
+        <span class="symbol-tag" onclick="copyText('╰❥')">╰❥</span>
+        <span class="symbol-tag" onclick="copyText('︵✰')">︵✰</span>
+        <span class="symbol-tag" onclick="copyText('⚡')">⚡</span>
+        <span class="symbol-tag" onclick="copyText('👑')">👑</span>
+        <span class="symbol-tag" onclick="copyText('💖')">💖</span>
+        <span class="symbol-tag" onclick="copyText('ღ')">ღ</span>
+        <span class="symbol-tag" onclick="copyText('❦')">❦</span>
+        <span class="symbol-tag" onclick="copyText('(͡° ͜ʖ ͡°)')">(͡° ͜ʖ ͡°)</span>
+        <span class="symbol-tag" onclick="copyText('ʕ•ᴥ•ʔ')">ʕ•ᴥ•ʔ</span>
+        <span class="symbol-tag" onclick="copyText('(◕‿◕✿)')">(◕‿◕✿)</span>
+        <span class="symbol-tag" onclick="copyText('①②③④⑤')">①②③④⑤</span>
+        <span class="symbol-tag" onclick="copyText('❶❷❸❹❺')">❶❷❸❹❺</span>
+        <span class="symbol-tag" onclick="copyText('「')">「</span>
+        <span class="symbol-tag" onclick="copyText('」')">」</span>
+        <span class="symbol-tag" onclick="copyText('『')">『</span>
+        <span class="symbol-tag" onclick="copyText('』')">』</span>
+        <span class="symbol-tag" onclick="copyText('【')">【</span>
+        <span class="symbol-tag" onclick="copyText('】')">】</span>
+        <span class="symbol-tag" onclick="copyText('《')">《</span>
+        <span class="symbol-tag" onclick="copyText('》')">》</span>
+        <span class="symbol-tag" onclick="copyText('〖')">〖</span>
+        <span class="symbol-tag" onclick="copyText('〗')">〗</span>
+        <span class="symbol-tag" onclick="copyText('❖')">❖</span>
+        <span class="symbol-tag" onclick="copyText('✧')">✧</span>
+        <span class="symbol-tag" onclick="copyText('✪')">✪</span>
+        <span class="symbol-tag" onclick="copyText('☆')">☆</span>
+        <span class="symbol-tag" onclick="copyText('★')">★</span>
+        <span class="symbol-tag" onclick="copyText('♡')">♡</span>
+        <span class="symbol-tag" onclick="copyText('♥')">♥</span>
+        <span class="symbol-tag" onclick="copyText('❀')">❀</span>
+        <span class="symbol-tag" onclick="copyText('❁')">❁</span>
+        <span class="symbol-tag" onclick="copyText('✾')">✾</span>
+        <span class="symbol-tag" onclick="copyText('❦')">❦</span>
+        <span class="symbol-tag" onclick="copyText('❧')">❧</span>
+        <span class="symbol-tag" onclick="copyText('ツ')">ツ</span>
+        <span class="symbol-tag" onclick="copyText('※')">※</span>
+        <span class="symbol-tag" onclick="copyText('⌘')">⌘</span>
+        <span class="symbol-tag" onclick="copyText('☾')">☾</span>
+        <span class="symbol-tag" onclick="copyText('☽')">☽</span>
+        <span class="symbol-tag" onclick="copyText('✧･ﾟ')">✧･ﾟ</span>
+        <span class="symbol-tag" onclick="copyText('꧁༒')">꧁༒</span>
+        <span class="symbol-tag" onclick="copyText('༺')">༺</span>
+        <span class="symbol-tag" onclick="copyText('༻')">༻</span>
+        <span class="symbol-tag" onclick="copyText('⋆')">⋆</span>
+        <span class="symbol-tag" onclick="copyText('✦')">✦</span>
+        <span class="symbol-tag" onclick="copyText('✧')">✧</span>
+        <span class="symbol-tag" onclick="copyText('╰☆╮')">╰☆╮</span>
+        <span class="symbol-tag" onclick="copyText('╭∩╮')">╭∩╮</span>
+        <span class="symbol-tag" onclick="copyText('◆')">◆</span>
+        <span class="symbol-tag" onclick="copyText('◇')">◇</span>
+        <span class="symbol-tag" onclick="copyText('◈')">◈</span>
+        <span class="symbol-tag" onclick="copyText('◉')">◉</span>
+        <span class="symbol-tag" onclick="copyText('●')">●</span>
+        <span class="symbol-tag" onclick="copyText('○')">○</span>
+        <span class="symbol-tag" onclick="copyText('◎')">◎</span>
+        <span class="symbol-tag" onclick="copyText('✧˖°')">✧˖°</span>
+        <span class="symbol-tag" onclick="copyText('⋆｡˚')">⋆｡˚</span>
+        <span class="symbol-tag" onclick="copyText('꒰')">꒰</span>
+        <span class="symbol-tag" onclick="copyText('꒱')">꒱</span>
+        <span class="symbol-tag" onclick="copyText('༄')">༄</span>
+        <span class="symbol-tag" onclick="copyText('༒')">༒</span>
+        <span class="symbol-tag" onclick="copyText('༓')">༓</span>
+        <span class="symbol-tag" onclick="copyText('༼')">༼</span>
+        <span class="symbol-tag" onclick="copyText('༽')">༽</span>
+        <span class="symbol-tag" onclick="copyText('ᚠ')">ᚠ</span>
+        <span class="symbol-tag" onclick="copyText('ᚢ')">ᚢ</span>
+        <span class="symbol-tag" onclick="copyText('ᚦ')">ᚦ</span>
+        <span class="symbol-tag" onclick="copyText('ᚨ')">ᚨ</span>
+        <span class="symbol-tag" onclick="copyText('ᚱ')">ᚱ</span>
+        <span class="symbol-tag" onclick="copyText('ᚲ')">ᚲ</span>
+        <span class="symbol-tag" onclick="copyText('ᚷ')">ᚷ</span>
+        <span class="symbol-tag" onclick="copyText('ᚹ')">ᚹ</span>
+        <span class="symbol-tag" onclick="copyText('ᚺ')">ᚺ</span>
+        <span class="symbol-tag" onclick="copyText('ᚾ')">ᚾ</span>
+        <span class="symbol-tag" onclick="copyText('ᛁ')">ᛁ</span>
+        <span class="symbol-tag" onclick="copyText('ᛃ')">ᛃ</span>
+        <span class="symbol-tag" onclick="copyText('ᛈ')">ᛈ</span>
+        <span class="symbol-tag" onclick="copyText('ᛉ')">ᛉ</span>
+        <span class="symbol-tag" onclick="copyText('ᛊ')">ᛊ</span>
+        <span class="symbol-tag" onclick="copyText('ᛋ')">ᛋ</span>
+        <span class="symbol-tag" onclick="copyText('ᛏ')">ᛏ</span>
+        <span class="symbol-tag" onclick="copyText('ᛒ')">ᛒ</span>
+        <span class="symbol-tag" onclick="copyText('ᛖ')">ᛖ</span>
+        <span class="symbol-tag" onclick="copyText('ᛗ')">ᛗ</span>
+        <span class="symbol-tag" onclick="copyText('ᛚ')">ᛚ</span>
+        <span class="symbol-tag" onclick="copyText('ᛞ')">ᛞ</span>
+        <span class="symbol-tag" onclick="copyText('ᛟ')">ᛟ</span>
+        <span class="symbol-tag" onclick="copyText('(｡♥‿♥｡)')">(｡♥‿♥｡)</span>
+        <span class="symbol-tag" onclick="copyText('╰(▔∀▔)╯')">╰(▔∀▔)╯</span>
+        <span class="symbol-tag" onclick="copyText('(◕‿◕)')">(◕‿◕)</span>
+        <span class="symbol-tag" onclick="copyText('(✿◠‿◠)')">(✿◠‿◠)</span>
+        <span class="symbol-tag" onclick="copyText('(｡◕‿◕｡)')">(｡◕‿◕｡)</span>
+        <span class="symbol-tag" onclick="copyText('(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧')">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</span>
+        <span class="symbol-tag" onclick="copyText('(≧▽≦)')">(≧▽≦)</span>
+        <span class="symbol-tag" onclick="copyText('(◠‿◠)')">(◠‿◠)</span>
+        <span class="symbol-tag" onclick="copyText('(づ｡◕‿‿◕｡)づ')">(づ｡◕‿‿◕｡)づ</span>
+        <span class="symbol-tag" onclick="copyText('(ノ°∀°)ノ')">(ノ°∀°)ノ</span>
+        <span class="symbol-tag" onclick="copyText('(๑>ᴗ<๑)')">(๑>ᴗ<๑)</span>
+        <span class="symbol-tag" onclick="copyText('(｡•́︿•̀｡)')">(｡•́︿•̀｡)</span>
+        <span class="symbol-tag" onclick="copyText('(っ˘̩╭╮˘̩)っ')">(っ˘̩╭╮˘̩)っ</span>
+        <span class="symbol-tag" onclick="copyText('( ˘⌣˘)♡(˘⌣˘ )')">( ˘⌣˘)♡(˘⌣˘ )</span>
+        <span class="symbol-tag" onclick="copyText('(ﾉ´ヮ`)ﾉ*: ･ﾟ')">(ﾉ´ヮ`)ﾉ*: ･ﾟ</span>
+        <span class="symbol-tag" onclick="copyText('(๑˃̵ᴗ˂̵)و')">(๑˃̵ᴗ˂̵)و</span>
+        <span class="symbol-tag" onclick="copyText('(◕ᴗ◕✿)')">(◕ᴗ◕✿)</span>
+        <span class="symbol-tag" onclick="copyText('(≧ω≦)')">(≧ω≦)</span>
+        <span class="symbol-tag" onclick="copyText('(＾▽＾)')">(＾▽＾)</span>
+        <span class="symbol-tag" onclick="copyText('(´｡• ᵕ •｡`)')">(´｡• ᵕ •｡`)</span>
+        <span class="symbol-tag" onclick="copyText('(๑>◡<๑)')">(๑>◡<๑)</span>
+        <span class="symbol-tag" onclick="copyText('(ﾉ◕ヮ◕)ﾉ')">(ﾉ◕ヮ◕)ﾉ</span>
+        <span class="symbol-tag" onclick="copyText('(｡･ω･｡)')">(｡･ω･｡)</span>
+        <span class="symbol-tag" onclick="copyText('(´∀｀)')">(´∀｀)</span>
+        <span class="symbol-tag" onclick="copyText('(◕‿◕✿)')">(◕‿◕✿)</span>
+        <span class="symbol-tag" onclick="copyText('(｡♥‿♥｡)')">(｡♥‿♥｡)</span>
+        <span class="symbol-tag" onclick="copyText('╰(▔∀▔)╯')">╰(▔∀▔)╯</span>
+        <span class="symbol-tag" onclick="copyText('(͡° ͜ʖ ͡°)')">(͡° ͜ʖ ͡°)</span>
+        <span class="symbol-tag" onclick="copyText('ʕ•ᴥ•ʔ')">ʕ•ᴥ•ʔ</span>
+        <span class="symbol-tag" onclick="copyText('(◕‿◕✿)')">(◕‿◕✿)</span>
+        <span class="symbol-tag" onclick="copyText('①')">①</span>
+        <span class="symbol-tag" onclick="copyText('②')">②</span>
+        <span class="symbol-tag" onclick="copyText('③')">③</span>
+        <span class="symbol-tag" onclick="copyText('④')">④</span>
+        <span class="symbol-tag" onclick="copyText('⑤')">⑤</span>
+        <span class="symbol-tag" onclick="copyText('⑥')">⑥</span>
+        <span class="symbol-tag" onclick="copyText('⑦')">⑦</span>
+        <span class="symbol-tag" onclick="copyText('⑧')">⑧</span>
+        <span class="symbol-tag" onclick="copyText('⑨')">⑨</span>
+        <span class="symbol-tag" onclick="copyText('⑩')">⑩</span>
+        <span class="symbol-tag" onclick="copyText('❶')">❶</span>
+        <span class="symbol-tag" onclick="copyText('❷')">❷</span>
+        <span class="symbol-tag" onclick="copyText('❸')">❸</span>
+        <span class="symbol-tag" onclick="copyText('❹')">❹</span>
+        <span class="symbol-tag" onclick="copyText('❺')">❺</span>
+        <span class="symbol-tag" onclick="copyText('❻')">❻</span>
+        <span class="symbol-tag" onclick="copyText('❼')">❼</span>
+        <span class="symbol-tag" onclick="copyText('❽')">❽</span>
+        <span class="symbol-tag" onclick="copyText('❾')">❾</span>
+        <span class="symbol-tag" onclick="copyText('❿')">❿</span>
+        <span class="symbol-tag" onclick="copyText('𝟏')">𝟏</span>
+        <span class="symbol-tag" onclick="copyText('𝟐')">𝟐</span>
+        <span class="symbol-tag" onclick="copyText('𝟑')">𝟑</span>
+        <span class="symbol-tag" onclick="copyText('𝟒')">𝟒</span>
+        <span class="symbol-tag" onclick="copyText('𝟓')">𝟓</span>
+        <span class="symbol-tag" onclick="copyText('𝟔')">𝟔</span>
+        <span class="symbol-tag" onclick="copyText('𝟕')">𝟕</span>
+        <span class="symbol-tag" onclick="copyText('𝟖')">𝟖</span>
+        <span class="symbol-tag" onclick="copyText('𝟗')">𝟗</span>
+        <span class="symbol-tag" onclick="copyText('𝟎')">𝟎</span>
+        <span class="symbol-tag" onclick="copyText('𝟏𝟐𝟑')">𝟏𝟐𝟑</span>
+        <span class="symbol-tag" onclick="copyText('➀')">➀</span>
+        <span class="symbol-tag" onclick="copyText('➁')">➁</span>
+        <span class="symbol-tag" onclick="copyText('➂')">➂</span>
+        <span class="symbol-tag" onclick="copyText('➃')">➃</span>
+        <span class="symbol-tag" onclick="copyText('➄')">➄</span>
+        <span class="symbol-tag" onclick="copyText('➅')">➅</span>
+        <span class="symbol-tag" onclick="copyText('➆')">➆</span>
+        <span class="symbol-tag" onclick="copyText('➇')">➇</span>
+        <span class="symbol-tag" onclick="copyText('➈')">➈</span>
+        <span class="symbol-tag" onclick="copyText('➉')">➉</span>
+        <span class="symbol-tag" onclick="copyText('➊')">➊</span>
+        <span class="symbol-tag" onclick="copyText('➋')">➋</span>
+        <span class="symbol-tag" onclick="copyText('➌')">➌</span>
+        <span class="symbol-tag" onclick="copyText('➍')">➍</span>
+        <span class="symbol-tag" onclick="copyText('➎')">➎</span>
+        <span class="symbol-tag" onclick="copyText('➏')">➏</span>
+        <span class="symbol-tag" onclick="copyText('➐')">➐</span>
+        <span class="symbol-tag" onclick="copyText('➑')">➑</span>
+        <span class="symbol-tag" onclick="copyText('➒')">➒</span>
+        <span class="symbol-tag" onclick="copyText('➓')">➓</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Hệ thống tạo kí tự đặc biệt được vận hành bởi <strong>dev Kim Yến</strong> © 2026
+  </footer>
+
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i> Đã sao chép vào bộ nhớ tạm!
+  </div>
+
+  <script>
+    // Bản đồ 20+ Font chữ Unicode
+    const fontMaps = {
+      smallCaps: { a: 'ᴀ', b: 'ʙ', c: 'ᴄ', d: 'ᴅ', e: 'ᴇ', f: 'ғ', g: 'ɢ', h: 'ʜ', i: 'ɪ', j: 'ᴊ', k: 'ᴋ', l: 'ʟ', m: 'ᴍ', n: 'ɴ', o: 'ᴏ', p: 'ᴘ', q: 'ǫ', r: 'ʀ', s: 's', t: 'ᴛ', u: 'ᴜ', v: 'ᴠ', w: 'ᴡ', x: 'x', y: 'ʏ', z: 'ᴢ' },
+      script: { a: '𝒶', b: '𝒷', c: '𝒸', d: '𝒹', e: '𝑒', f: '𝒻', g: '𝑔', h: '𝒽', i: '𝒾', j: '𝒿', k: '𝓀', l: '𝓁', m: '𝓂', n: '𝓃', o: '𝑜', p: '𝓅', q: '𝓆', r: '𝓇', s: '𝓈', t: '𝓉', u: '𝓊', v: '𝓋', w: '𝓌', x: '𝓍', y: '𝓎', z: '𝓏' },
+      bold: { a: '𝐚', b: '𝐛', c: '𝐜', d: '𝐝', e: '𝐞', f: '𝐟', g: '𝐠', h: '𝐡', i: '𝐢', j: '𝐣', k: '𝐤', l: '𝐥', m: '𝐦', n: '𝐧', o: '𝐨', p: '𝐩', q: '𝐪', r: '𝐫', s: '𝐬', t: '𝐭', u: '𝐮', v: '𝐯', w: '𝐰', x: '𝐱', y: '𝐲', z: '𝐳' },
+      circled: { a: 'ⓐ', b: 'ⓑ', c: 'ⓒ', d: 'ⓓ', e: 'ⓔ', f: 'ⓕ', g: 'ⓖ', h: 'ⓗ', i: 'ⓘ', j: 'ⓙ', k: 'ⓚ', l: 'ⓛ', m: 'ⓜ', n: 'ⓝ', o: 'ⓞ', p: 'ⓟ', q: 'ⓠ', r: 'ⓡ', s: 'ⓢ', t: 'ⓣ', u: 'ⓤ', v: 'ⓥ', w: 'ⓦ', x: 'ⓧ', y: 'ⓨ', z: 'ⓩ' },
+      squared: { a: '🄰', b: '🄱', c: '🄲', d: '🄳', e: '🄴', f: '🄵', g: '🄶', h: '🄷', i: '🄸', j: '🄹', k: '🄺', l: '🄻', m: '🄼', n: '🄽', o: '🄾', p: '🄿', q: '🅀', r: '🅁', s: '🅂', t: '🅃', u: '🅄', v: '🅅', w: '🅆', x: '🅇', y: '🅈', z: '🅉' },
+      gothic: { a: '𝖆', b: '𝖇', c: '𝖈', d: '𝖉', e: '𝖊', f: '𝖋', g: '𝖌', h: '𝖍', i: '𝖎', j: '𝖏', k: '𝖐', l: '𝖑', m: '𝖒', n: '𝖓', o: '𝖔', p: '𝖕', q: '𝖖', r: '𝖗', s: '𝖘', t: '𝖙', u: '𝖚', v: '𝖛', w: '𝖜', x: '𝖝', y: '𝖞', z: '𝖟' },
+      fullwidth: { a: 'ａ', b: 'ｂ', c: 'ｃ', d: 'ｄ', e: 'ｅ', f: 'ｆ', g: 'ｇ', h: 'ｈ', i: 'ｉ', j: 'ｊ', k: 'ｋ', l: 'ｌ', m: 'ｍ', n: 'ｎ', o: 'ｏ', p: 'ｐ', q: 'ｑ', r: 'ｒ', s: 'ｓ', t: 'ｔ', u: 'ｕ', v: 'ｖ', w: 'ｗ', x: 'ｘ', y: 'ｙ', z: 'ｚ' },
+      mono: { a: '𝚊', b: '𝚋', c: '𝚌', d: '𝚍', e: '𝚎', f: '𝚏', g: '𝚐', h: '𝚑', i: '𝚒', j: '𝚓', k: '𝚔', l: '𝚕', m: '𝚖', n: '𝚗', o: '𝚘', p: '𝚙', q: '𝚚', r: '𝚛', s: '𝚜', t: '𝚝', u: '𝚞', v: '𝚟', w: '𝚠', x: '𝚡', y: '𝚢', z: '𝚣' },
+      italic: { a: '𝑎', b: '𝑏', c: '𝑐', d: '𝑑', e: '𝑒', f: '𝑓', g: '𝑔', h: 'ℎ', i: '𝑖', j: '𝑗', k: '𝑘', l: '𝑙', m: '𝑚', n: '𝑛', o: '𝑜', p: '𝑝', q: '𝑞', r: '𝑟', s: '𝑠', t: '𝑡', u: '𝑢', v: '𝑣', w: '𝑤', x: '𝑥', y: '𝑦', z: '𝑧' },
+      boldItalic: { a: '𝒂', b: '𝒃', c: '𝒄', d: '𝒅', e: '𝒆', f: '𝒇', g: '𝒈', h: '𝒉', i: '𝒊', j: '𝒋', k: '𝒌', l: '𝒍', m: '𝒎', n: '𝒏', o: '𝒐', p: '𝒑', q: '𝒒', r: '𝒓', s: '𝒔', t: '𝒕', u: '𝒖', v: '𝒗', w: '𝒘', x: '𝒙', y: '𝒚', z: '𝒛' },
+      fraktur: { a: '𝔞', b: '𝔟', c: '𝔠', d: '𝔡', e: '𝔢', f: '𝔣', g: '𝔤', h: '𝔥', i: '𝔦', j: '𝔧', k: '𝔨', l: '𝔩', m: '𝔪', n: '𝔫', o: '𝔬', p: '𝔭', q: '𝔮', r: '𝔯', s: '𝔰', t: '𝔱', u: '𝔲', v: '𝔳', w: '𝔴', x: '𝔵', y: '𝔶', z: '𝔷' },
+      doubleStruck: { a: '𝕒', b: '𝕓', c: '𝕔', d: '𝕕', e: '𝕖', f: '𝕗', g: '𝕘', h: '𝕙', i: '𝕚', j: '𝕛', k: '𝕜', l: '𝕝', m: '𝕞', n: '𝕟', o: '𝕠', p: '𝕡', q: '𝕢', r: '𝕣', s: '𝕤', t: '𝕥', u: '𝕦', v: '𝕧', w: '𝕨', x: '𝕩', y: '𝕪', z: '𝕫' }
+    };
+
+    let activeTab = 'all';
+
+    function transformText(text, map) {
+      return text.toLowerCase().split('').map(c => map[c] || c).join('');
+    }
+
+    // Xử lý chèn kí tự giữa
+    function applyMidDecor(text, sep) {
+      if (!sep || sep === ' ') return text;
+      return text.split('').join(sep);
+    }
+
+    // Render danh sách chính
+    function renderStyles() {
+      const rawInput = document.getElementById('nameInput').value.trim() || "Kim Yến";
+      const left = document.getElementById('leftDecor').value;
+      const right = document.getElementById('rightDecor').value;
+      const mid = document.getElementById('midDecor').value;
+
+      const input = applyMidDecor(rawInput, mid);
+      const resultList = document.getElementById('resultList');
+
+      let styles = [];
+
+      // Dữ liệu theo Tab
+      if (activeTab === 'all' || activeTab === 'game') {
+        styles.push(
+          `${left} ${input} ${right}`,
+          `${left}༺ ${input} ༻${right}`,
+          `✿ ${input} ✿`,
+          `╰❥ ${input} ❣`,
+          `︵✰ ${input} ✰︵`,
+          `★彡 ${input} 彡★`,
+          `⚡ ${input} ⚡`,
+          `👑 ${input} 👑`,
+          `亗 ${input} 亗`,
+          `I AM • ${input}`,
+          `[ ${input} ]`,
+          `꧁༺ ${transformText(input, fontMaps.smallCaps)} ༻꧂`,
+          `「 ${input} 」`,
+          `『 ${input} 』`,
+          `【 ${input} 】`,
+          `《 ${input} 》`,
+          `〖 ${input} 〗`,
+          `『✦ ${input} ✦』`,
+          `❖ ${input} ❖`,
+          `✧ ${input} ✧`,
+          `✪ ${input} ✪`,
+          `☆ ${input} ☆`,
+          `★ ${input} ★`,
+          `ღ ${input} ღ`,
+          `♡ ${input} ♡`,
+          `♥ ${input} ♥`,
+          `❀ ${input} ❀`,
+          `❁ ${input} ❁`,
+          `✾ ${input} ✾`,
+          `❦ ${input} ❦`,
+          `❧ ${input} ❧`,
+          `ツ ${input} ツ`,
+          `※ ${input} ※`,
+          `⌘ ${input} ⌘`,
+          `☾ ${input} ☽`,
+          `✧･ﾟ ${input} ･ﾟ✧`,
+          `꧁༒ ${input} ༒꧂`,
+          `༺ ${input} ༻`,
+          `⋆ ${input} ⋆`,
+          `✦ ${input} ✦`,
+          `✧ ${input} ✧`,
+          `╰☆╮ ${input} ╰☆╮`,
+          `╭∩╮ ${input} ╭∩╮`,
+          `◆ ${input} ◆`,
+          `◇ ${input} ◇`,
+          `◈ ${input} ◈`,
+          `◉ ${input} ◉`,
+          `● ${input} ●`,
+          `○ ${input} ○`,
+          `◎ ${input} ◎`,
+          `✧˖° ${input} °˖✧`,
+          `⋆｡˚ ${input} ˚｡⋆`,
+          `꒰ ${input} ꒱`,
+          `༄ ${input} ༄`,
+          `༒ ${input} ༒`,
+          `༓ ${input} ༓`,
+          `༼ ${input} ༽`,
+          `ᚠ ${input} ᚠ`,
+          `ᚢ ${input} ᚢ`,
+          `ᚦ ${input} ᚦ`,
+          `ᚨ ${input} ᚨ`,
+          `ᚱ ${input} ᚱ`,
+          `ᚲ ${input} ᚲ`,
+          `ᚷ ${input} ᚷ`,
+          `ᚹ ${input} ᚹ`,
+          `ᚺ ${input} ᚺ`,
+          `ᚾ ${input} ᚾ`,
+          `ᛁ ${input} ᛁ`,
+          `ᛃ ${input} ᛃ`,
+          `ᛈ ${input} ᛈ`,
+          `ᛉ ${input} ᛉ`,
+          `ᛊ ${input} ᛊ`,
+          `ᛋ ${input} ᛋ`,
+          `ᛏ ${input} ᛏ`,
+          `ᛒ ${input} ᛒ`,
+          `ᛖ ${input} ᛖ`,
+          `ᛗ ${input} ᛗ`,
+          `ᛚ ${input} ᛚ`,
+          `ᛞ ${input} ᛞ`,
+          `ᛟ ${input} ᛟ`
+        );
+      }
+
+      if (activeTab === 'all' || activeTab === 'fonts') {
+        styles.push(
+          `${transformText(input, fontMaps.smallCaps)}`,
+          `${transformText(input, fontMaps.script)}`,
+          `${transformText(input, fontMaps.bold)}`,
+          `${transformText(input, fontMaps.circled)}`,
+          `${transformText(input, fontMaps.squared)}`,
+          `${transformText(input, fontMaps.gothic)}`,
+          `${transformText(input, fontMaps.fullwidth)}`,
+          `${transformText(input, fontMaps.mono)}`,
+          `${transformText(input, fontMaps.italic)}`,
+          `${transformText(input, fontMaps.boldItalic)}`,
+          `${transformText(input, fontMaps.fraktur)}`,
+          `${transformText(input, fontMaps.doubleStruck)}`
+        );
+      }
+
+      if (activeTab === 'all' || activeTab === 'kaomoji') {
+        styles.push(
+          `(͡° ͜ʖ ͡°) ${input}`,
+          `ʕ•ᴥ•ʔ ${input}`,
+          `(◕‿◕✿) ${input}`,
+          `(｡♥‿♥｡) ${input}`,
+          `╰(▔∀▔)╯ ${input}`,
+          `(◕‿◕) ${input}`,
+          `(✿◠‿◠) ${input}`,
+          `(｡◕‿◕｡) ${input}`,
+          `(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ${input}`,
+          `(≧▽≦) ${input}`,
+          `(◠‿◠) ${input}`,
+          `(づ｡◕‿‿◕｡)づ ${input}`,
+          `(ノ°∀°)ノ ${input}`,
+          `(๑>ᴗ<๑) ${input}`,
+          `(｡•́︿•̀｡) ${input}`,
+          `(っ˘̩╭╮˘̩)っ ${input}`,
+          `( ˘⌣˘)♡(˘⌣˘ ) ${input}`,
+          `(ﾉ´ヮ`)ﾉ*: ･ﾟ ${input}`,
+          `(๑˃̵ᴗ˂̵)و ${input}`,
+          `(◕ᴗ◕✿) ${input}`,
+          `(≧ω≦) ${input}`,
+          `(＾▽＾) ${input}`,
+          `(´｡• ᵕ •｡`) ${input}`,
+          `(๑>◡<๑) ${input}`,
+          `(ﾉ◕ヮ◕)ﾉ ${input}`,
+          `(｡･ω･｡) ${input}`,
+          `(´∀｀) ${input}`
+        );
+      }
+
+      if (activeTab === 'all' || activeTab === 'numbers') {
+        styles.push(
+          `①②③ ${input} ③②①`,
+          `❶❷❸ ${input} ❸❷❶`,
+          `𝟣𝟤𝟥 ${input} 𝟥𝟤𝟣`,
+          `𝟏𝟐𝟑 ${input} 𝟑𝟐𝟏`,
+          `➀➁➂ ${input} ➂➁➀`,
+          `➊➋➌ ${input} ➌➋➊`,
+          `① ${input} ①`,
+          `❷ ${input} ❷`,
+          `𝟑 ${input} 𝟑`,
+          `④ ${input} ④`,
+          `❺ ${input} ❺`,
+          `𝟔 ${input} 𝟔`,
+          `⑦ ${input} ⑦`,
+          `❽ ${input} ❽`,
+          `𝟗 ${input} 𝟗`,
+          `⑩ ${input} ⑩`
+        );
+      }
+
+      resultList.innerHTML = styles.map(str => `
+        <div class="result-item" onclick="copyText('${escapeHtml(str)}')">
+          <span class="result-text">${escapeHtml(str)}</span>
+          <button class="btn-copy"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      `).join('');
+    }
+
+    function switchTab(tabName) {
+      activeTab = tabName;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderStyles();
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    function copyText(str) {
+      navigator.clipboard.writeText(str).then(() => {
+        showToast();
+      }).catch(() => {
+        const el = document.createElement('textarea');
+        el.value = str;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        showToast();
+      });
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2000);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const icon = document.getElementById('themeIcon');
+      if (document.body.classList.contains('light-mode')) {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+      }
+    }
+
+    document.getElementById('nameInput').addEventListener('input', renderStyles);
+    renderStyles();
+  </script>
+</body>
+</html>
+ershedi
